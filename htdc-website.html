@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Hazera-Taju Degree College (HTDC) | হাজেরা-তজু ডিগ্রী কলেজ</title>
+    <meta name="description" content="Hazera-Taju Degree College, B.Sc Chattar, Chandgaon, Chattogram — a non-political educational institution committed to quality education. HSC, Honours and Degree programs.">
+    <meta name="theme-color" content="#0d3a37">
+    <script>document.documentElement.classList.add('js');</script>
+    <noscript><style>#pageLoader{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+    <link rel="icon" href="https://htdc.edu.bd/images/logo.svg" type="image/svg+xml">
+    
+    <!-- Google Fonts: Inter (English UI + headings), Parisienne (script accent, closest free match to "Tempting"), Hind Siliguri & Noto Serif Bengali (Bangla - unchanged) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Noto+Serif+Bengali:wght@500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            DEFAULT: '#14237A',
+                            deep: '#0B154D',
+                            night: '#060B28',
+                        },
+                        emerald: {
+                            htdc: '#0E7C47',
+                            light: '#149E5B',
+                            dark: '#095430',
+                        },
+                        gold: {
+                            DEFAULT: '#E0A526',
+                            rich: '#BF8A14',
+                            light: '#F3CE78',
+                        },
+                        crimson: {
+                            htdc: '#D62828',
+                        },
+                        ivory: {
+                            DEFAULT: '#FBF7EE',
+                            warm: '#F4ECDB',
+                        },
+                        midnight: {
+                            DEFAULT: '#070D1F',
+                            card: '#0E1733',
+                            elevated: '#142045',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Inter', '"Noto Serif Bengali"', 'system-ui', 'sans-serif'],
+                        display: ['Inter', '"Noto Serif Bengali"', 'system-ui', 'sans-serif'],
+                        script: ['Parisienne', 'cursive'],
+                        sans: ['Inter', '"Hind Siliguri"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-primary: #FBF7EE;
+            --bg-secondary: #FFFFFF;
+            --bg-warm: #F4ECDB;
+            --text-primary: #0B154D;
+            --text-secondary: #444A5C;
+            --border-subtle: rgba(20, 35, 122, 0.10);
+            --glass-bg: rgba(251, 247, 238, 0.90);
+        }
+
+        html.dark {
+            --bg-primary: #070D1F;
+            --bg-secondary: #0E1733;
+            --bg-warm: #0B1229;
+            --text-primary: #F8FAFC;
+            --text-secondary: #D9D5CB;
+            --border-subtle: rgba(229, 169, 26, 0.16);
+            --glass-bg: rgba(7, 13, 31, 0.90);
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-x: clip;
+            background-color: var(--bg-primary);
+            color: var(--text-secondary);
+            font-family: 'Inter', 'Hind Siliguri', system-ui, sans-serif;
+            transition: background-color 0.45s ease, color 0.45s ease;
+        }
+
+        /* Nav fix: keep anchor targets clear of the sticky header */
+        html { scroll-padding-top: 6rem; }
+
+        /* Bangla Typography Enhancements */
+        html[lang="bn"] body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+        }
+        html[lang="bn"] .font-serif,
+        html[lang="bn"] .font-display {
+            font-family: 'Noto Serif Bengali', 'Inter', serif;
+            line-height: 1.28;
+        }
+
+        /* Top Scroll Progress Indicator */
+        #scrollProgress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #0E7C47, #E5A91A, #D62828);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Curtain Preloader */
+        #pageLoader {
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            background: #060B28;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.65s ease;
+        }
+        /* Failsafe: the curtain always lifts, even if a script fails */
+        #pageLoader { animation: loaderFailsafe 0.01s linear 3s forwards; }
+        @keyframes loaderFailsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+        #pageLoader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Hero Slow Ken Burns Zoom */
+        @keyframes slowZoom {
+            0% { transform: scale(1) translate3d(0, 0, 0); }
+            100% { transform: scale(1.08) translate3d(-1%, -1%, 0); }
+        }
+        .animate-hero-zoom {
+            animation: slowZoom 22s ease-in-out infinite alternate;
+        }
+
+        /* Floating Subtle Crest Pulse */
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-float {
+            animation: gentleFloat 4.5s ease-in-out infinite;
+        }
+
+        /* Staggered Scroll Reveal */
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .js .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.12s; }
+        .reveal-delay-2 { transition-delay: 0.24s; }
+        .reveal-delay-3 { transition-delay: 0.36s; }
+
+        /* Editorial Link Underline */
+        .editorial-link {
+            position: relative;
+            display: inline-block;
+        }
+        .editorial-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #0E7C47, #E5A91A);
+            transition: width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .editorial-link:hover::after {
+            width: 100%;
+        }
+
+        /* Glassmorphic Sticky Header */
+        .glass-header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        /* Magnetic Button Micro-Interaction */
+        .btn-luxury {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+        }
+        .btn-luxury:hover {
+            transform: translateY(-2px);
+        }
+        .btn-luxury:active {
+            transform: translateY(0px) scale(0.98);
+        }
+
+        /* Fluid Editorial Display Typography */
+        .hero-headline {
+            font-size: clamp(2.7rem, 7.2vw, 5.6rem);
+            line-height: 1.04;
+            letter-spacing: -0.025em;
+            text-shadow: 0 2px 30px rgba(6, 11, 40, 0.45);
+            max-width: 15ch;
+        }
+        html[lang="bn"] .hero-headline {
+            font-size: clamp(2.35rem, 5.8vw, 4.5rem);
+            line-height: 1.3;
+            letter-spacing: 0;
+            max-width: 18ch;
+        }
+
+        /* Hero: warm light, logo-coloured rule, premium CTA */
+        .hero-glow {
+            background:
+                radial-gradient(ellipse 60% 70% at 12% 85%, rgba(229, 169, 26, 0.20), transparent 65%),
+                radial-gradient(ellipse 50% 60% at 95% 10%, rgba(14, 124, 71, 0.18), transparent 70%);
+            mix-blend-mode: screen;
+        }
+        .hero-rule {
+            width: 88px;
+            height: 3px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #0E7C47, #E5A91A, #D62828);
+            box-shadow: 0 0 18px rgba(229, 169, 26, 0.55);
+        }
+        .hero-edge {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(243, 206, 120, 0.7), transparent);
+        }
+        .btn-cta {
+            background: linear-gradient(135deg, #F6DC93 0%, #E5A91A 48%, #C98F12 100%);
+            color: #0B154D;
+            letter-spacing: 0.01em;
+            box-shadow: 0 14px 34px -10px rgba(229, 169, 26, 0.65),
+                        0 0 0 1px rgba(255, 233, 170, 0.55) inset,
+                        0 1px 0 rgba(255, 255, 255, 0.6) inset;
+            animation: ctaGlow 3.6s ease-in-out infinite;
+        }
+        .btn-cta:hover {
+            box-shadow: 0 20px 44px -10px rgba(229, 169, 26, 0.8),
+                        0 0 0 1px rgba(255, 233, 170, 0.8) inset,
+                        0 1px 0 rgba(255, 255, 255, 0.7) inset;
+        }
+        .btn-cta::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -70%;
+            width: 40%; height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transform: skewX(-20deg);
+            pointer-events: none;
+            animation: ctaShine 5s ease-in-out infinite;
+        }
+        .btn-cta .cta-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 999px;
+            background: #0B154D;
+            color: #F3CE78;
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .btn-cta:hover .cta-arrow { transform: translateX(4px); }
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(243, 206, 120, 0.35);
+            color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #F3CE78;
+        }
+        @keyframes ctaShine {
+            0%, 55% { left: -70%; }
+            100% { left: 140%; }
+        }
+        @keyframes ctaGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.06); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .btn-cta, .btn-cta::after { animation: none; }
+        }
+        .section-headline {
+            font-size: clamp(1.85rem, 3.6vw, 3.1rem);
+            line-height: 1.18;
+        }
+
+
+        /* =====================================================================
+           DESIGN REVIEW FIXES
+           1) Typography: Inter + script accent (swap --font-script to use "Tempting")
+           2) Legibility / contrast   3) Calmer motion   4) Accessibility
+        ===================================================================== */
+        :root { --font-script: 'Parisienne', cursive; }
+        /* To use the licensed Tempting font instead, add your own file:
+           @font-face { font-family: 'Tempting'; src: url('fonts/Tempting.woff2') format('woff2'); font-display: swap; }
+           then set  --font-script: 'Tempting', 'Parisienne', cursive;  */
+
+        body .font-serif, body .font-display { letter-spacing: -0.02em; }
+        body .hero-headline { font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1.1; letter-spacing: -0.035em; max-width: 17ch; font-weight: 700; }
+        body .section-headline { font-size: clamp(1.8rem, 3.3vw, 2.75rem); line-height: 1.15; letter-spacing: -0.03em; }
+        .hero-headline, .section-headline { text-wrap: balance; }
+        body .font-light { font-weight: 400; }
+        html[lang="bn"] body .font-serif, html[lang="bn"] body .font-display { letter-spacing: 0; }
+        html[lang="bn"] body .hero-headline { font-size: clamp(2.2rem, 5.4vw, 4.2rem); line-height: 1.3; letter-spacing: 0; max-width: 18ch; }
+        html[lang="bn"] body .section-headline { font-size: clamp(1.85rem, 3.6vw, 3.1rem); line-height: 1.25; letter-spacing: 0; }
+
+        .script-accent {
+            font-family: var(--font-script);
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0;
+            font-size: 1.3em;
+            line-height: 0.9;
+            padding-inline: 0.06em;
+            display: inline-block;
+        }
+
+        /* Legibility: no text under 12px, stronger muted text */
+        body [class*="text-[10px]"] { font-size: 0.75rem; }
+        body [class*="text-[11px]"] { font-size: 0.8125rem; }
+        body .text-slate-500 { color: #475569; }
+        html.dark body .dark\:text-slate-400 { color: #cbd5e1; }
+        body .text-white\/70 { color: rgba(255, 255, 255, 0.86); }
+        body .text-white\/80 { color: rgba(255, 255, 255, 0.92); }
+        body .text-white\/85 { color: rgba(255, 255, 255, 0.94); }
+        body .text-white\/65 { color: rgba(255, 255, 255, 0.82); }
+        body .text-white\/50 { color: rgba(255, 255, 255, 0.72); }
+
+        /* Calmer motion: no endless attention-grabbing loops */
+        body .animate-ping { animation: none; }
+        body .btn-cta { animation: none; }
+        body .btn-cta::after { animation: none; opacity: 0; }
+        body .btn-cta:hover::after { opacity: 1; animation: ctaShine 1.1s ease-out 1; }
+        @media (prefers-reduced-motion: reduce) {
+            html.scroll-smooth { scroll-behavior: auto; }
+            body .animate-ping, body .animate-pulse, body .animate-hero-zoom, body .animate-float { animation: none; }
+            body .btn-cta:hover::after { animation: none; }
+            #pageLoader { transition: none; }
+        }
+
+        /* Skip link (keyboard / screen reader users) */
+        .skip-link { position: absolute; left: 0.75rem; top: -4rem; z-index: 10000; background: #0B154D; color: #fff; padding: 0.7rem 1.1rem; border-radius: 0.6rem; font-weight: 600; transition: top 0.2s ease; }
+        .skip-link:focus { top: 0.75rem; }
+
+        /* Print styles for Official Notice Modal */
+        @media print {
+            body * { visibility: hidden; }
+            #printableNoticeArea, #printableNoticeArea * { visibility: visible; }
+            #printableNoticeArea {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 2rem;
+                background: white !important;
+                color: #0B154D !important;
+            }
+        }
+
+        /* =====================================================================
+           MOBILE RESPONSIVENESS REVIEW
+           Desktop (≥1024px) is untouched; only touch/mobile rules live below.
+           (Selectors start with "body" so they win over the Tailwind CDN classes.)
+        ===================================================================== */
+        html { -webkit-text-size-adjust: 100%; }
+        body a, body button, body select, body input, body label { touch-action: manipulation; }
+        a, button { -webkit-tap-highlight-color: rgba(229, 169, 26, 0.22); }
+        :focus-visible { outline: 2px solid #E5A91A; outline-offset: 3px; }
+
+        /* Reading progress ring (all screens): shows how much of the page has been viewed, tap = back to top */
+        #scrollRing {
+            position: fixed;
+            right: max(1rem, env(safe-area-inset-right, 0px));
+            bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+            width: 58px; height: 58px;
+            z-index: 45;
+            border: 0; padding: 0;
+            border-radius: 999px;
+            display: grid; place-items: center;
+            cursor: pointer;
+            background: rgba(251, 247, 238, 0.94);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 12px 30px -8px rgba(11, 21, 77, 0.5), 0 0 0 1px rgba(229, 169, 26, 0.35);
+            opacity: 0; visibility: hidden;
+            transform: translateY(14px) scale(0.92);
+            transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.35s;
+        }
+        #scrollRing.show { opacity: 1; visibility: visible; transform: none; }
+        html.dark #scrollRing { background: rgba(14, 23, 51, 0.94); }
+        #scrollRing svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+        #scrollRing .ring-track { fill: none; stroke: rgba(20, 35, 122, 0.12); stroke-width: 4; }
+        html.dark #scrollRing .ring-track { stroke: rgba(255, 255, 255, 0.14); }
+        #scrollRing .ring-arc { fill: none; stroke: url(#ringGrad); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 0.15s linear; }
+        #scrollRing .ring-pct { position: relative; font: 700 13px/1 'Inter', 'Hind Siliguri', sans-serif; color: var(--text-primary); letter-spacing: -0.02em; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .animate-hero-zoom, .animate-float { animation: none; }
+            #scrollRing, #scrollRing .ring-arc { transition: none; }
+        }
+
+        /* Touch devices have no hover: show the gallery expand icon permanently */
+        @media (hover: none) { #galleryGrid .opacity-0 { opacity: 1; } }
+
+        /* Stats bar: clean 2x2 grid on phones/tablets (the divide-x/y lines broke in 2 columns) */
+        @media (max-width: 1023px) {
+            .stats-grid > * { border-width: 0 !important; }
+            .stats-grid > :nth-child(even) { border-left-width: 1px !important; padding-left: 1rem; }
+            .stats-grid > :nth-child(n+3) { border-top-width: 1px !important; padding-top: 1.5rem; }
+        }
+
+        /* Bigger tap targets on touch screens and phones */
+        @media (pointer: coarse), (max-width: 639px) {
+            body #langToggleBtn, body #themeToggleBtn { min-height: 40px; padding: 0.4rem 0.9rem; font-size: 0.8125rem; }
+            body #mobileMenuBtn { min-width: 48px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
+            body .mobile-nav-link { min-height: 52px; }
+            body .notice-tab { min-height: 46px; }
+            body .academic-tier-btn { min-height: 52px; }
+            body #noticesGrid button, body #departmentsGrid button, body #departmentsGrid a { min-height: 44px; display: inline-flex; align-items: center; }
+            body #detailModal button[aria-label="Close"] { width: 44px; height: 44px; }
+            body #lightboxModal button { width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.55); border-radius: 999px; top: -3.4rem; right: 0; }
+            body footer ul li a { display: inline-block; padding: 0.5rem 0; }
+            body footer p a { display: inline-block; padding: 0.4rem 0; }
+        }
+
+        /* Phones */
+        @media (max-width: 639px) {
+            #scrollProgress { height: 5px; }
+
+            /* Readability: lift the smallest text sizes */
+            body .text-xs { font-size: 0.8125rem; line-height: 1.5; }
+            body .text-sm { font-size: 0.9375rem; line-height: 1.65; }
+            body [class*="text-[11px]"] { font-size: 0.8125rem; }
+            body [class*="text-[10px]"] { font-size: 0.75rem; }
+            body .text-slate-500 { color: #475569; }
+            html[lang="bn"] body p { line-height: 1.8; }
+            html[lang="bn"] body .text-xs { font-size: 0.875rem; }
+            html[lang="bn"] body .tracking-widest, html[lang="bn"] body .tracking-wider,
+            html[lang="bn"] body [class*="tracking-["] { letter-spacing: 0.02em; }
+
+            /* Less crowding: tighter section rhythm */
+            section.py-20 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+            body .mb-14 { margin-bottom: 2.25rem; }
+            body .mb-12 { margin-bottom: 2rem; }
+            #galleryGrid, #noticesGrid, #departmentsGrid, #peopleGrid, #servicesGrid, #facilitiesGrid { gap: 1rem; }
+
+            /* Header: let the college name wrap instead of being cut off */
+            body #mainHeader .truncate { white-space: normal; overflow: visible; text-overflow: clip; }
+            body #mainHeader [data-i18n="collegeName"] { line-height: 1.2; }
+            #mobileDrawer { max-height: 80vh; max-height: calc(100dvh - 5.5rem); }
+
+            /* Hero */
+            body .hero-headline { font-size: 2.4rem; }
+            html[lang="bn"] body .hero-headline { font-size: 2.1rem; }
+            body .hero-badge { border-radius: 1.1rem; letter-spacing: 0.06em; line-height: 1.5; padding: 0.55rem 0.95rem; max-width: 100%; }
+
+            /* Notice filters: tidy grid instead of ragged wrapping rows */
+            #noticeFilterTabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; width: 100%; }
+            #noticeFilterTabs .notice-tab { justify-content: center; text-align: center; }
+            #noticeFilterTabs .notice-tab:first-child { grid-column: 1 / -1; }
+            #departmentsGrid .border-t { flex-wrap: wrap; gap: 0.5rem 1rem; }
+
+            /* Academic tier switcher: full-width stacked buttons */
+            .tier-switch { flex-direction: column; align-items: stretch; }
+            .tier-switch .academic-tier-btn { width: 100%; text-align: center; }
+
+            /* Admission form: 16px fields stop iOS zooming in on focus */
+            body #admissionForm input, body #admissionForm select { font-size: 16px; min-height: 52px; }
+            body #admissionForm button[type="submit"] { min-height: 56px; font-size: 1rem; }
+
+            /* Modals: always scrollable and inside the screen */
+            body #detailModal > div { max-height: 92vh; max-height: 92dvh; overflow-y: auto; }
+            body #detailModal .justify-end { flex-wrap: wrap; }
+            body #detailModal .justify-end > * { flex: 1 1 auto; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
+        }
+
+        @media (max-width: 419px) {
+            body #mainHeader [data-i18n="collegeSub"] { display: none; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-royal selection:text-white dark:selection:bg-gold dark:selection:text-royal-night">
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Reading progress ring: % of the page viewed (tap to go back to top) -->
+    <button id="scrollRing" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 58 58" aria-hidden="true">
+            <defs>
+                <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#0E7C47"/>
+                    <stop offset="55%" stop-color="#E5A91A"/>
+                    <stop offset="100%" stop-color="#D62828"/>
+                </linearGradient>
+            </defs>
+            <circle class="ring-track" cx="29" cy="29" r="25"/>
+            <circle class="ring-arc" cx="29" cy="29" r="25"/>
+        </svg>
+        <span class="ring-pct">0%</span>
+    </button>
+
+    <!-- =====================================================================
+         CURTAIN PRELOADER WITH OFFICIAL HTDC CREST
+    ====================================================================== -->
+    <div id="pageLoader">
+        <div class="w-20 h-20 mb-4 animate-pulse">
+            <img src="https://htdc.edu.bd/images/logo.svg" alt="HTDC Crest" class="w-full h-full object-contain"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <!-- Inline SVG Matching Uploaded Official Logo -->
+            <svg viewBox="0 0 200 200" class="w-full h-full hidden" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="94" fill="#FFFFFF" stroke="#E5A91A" stroke-width="5"/>
+                <path d="M55 148 C30 115, 32 60, 75 28" fill="none" stroke="#0E7C47" stroke-width="4" stroke-linecap="round"/>
+                <path d="M145 148 C170 115, 168 60, 125 28" fill="none" stroke="#0E7C47" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="100" cy="64" r="7" fill="#D62828"/>
+                <path d="M66 66 L98 74 L98 124 L66 116 Z" fill="#0E7C47"/>
+                <path d="M134 66 L102 74 L102 124 L134 116 Z" fill="#0E7C47"/>
+                <circle cx="82" cy="95" r="7" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <polygon points="118,86 121,92 128,92 123,97 125,103 118,99 111,103 113,97 108,92 115,92" fill="#FFFFFF"/>
+                <path d="M44 134 Q100 116 156 134 L148 154 Q100 136 52 154 Z" fill="#14237A"/>
+                <text x="100" y="168" text-anchor="middle" fill="#14237A" font-size="12" font-weight="bold">জ্ঞানই শক্তি</text>
+            </svg>
+        </div>
+        <p class="font-serif text-gold-light text-lg tracking-widest uppercase">Hazera-Taju Degree College</p>
+        <p class="text-xs text-white/70 mt-1">Est. 1991 • Chandgaon, Chattogram</p>
+    </div>
+
+    <!-- =====================================================================
+         1. TOP INSTITUTIONAL UTILITY BAR + 1-CLICK LANGUAGE & THEME SWITCHERS
+    ====================================================================== -->
+    <div class="bg-royal-deep dark:bg-royal-night text-white/90 text-xs border-b border-white/10 transition-colors">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex flex-wrap justify-between items-center gap-2">
+            
+            <!-- Left: Institutional Codes (Responsive Wrapping) -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] sm:text-xs">
+                <span class="inline-flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-htdc ring-2 ring-gold/50"></span>
+                    <strong class="text-gold font-semibold" data-i18n="eiinLabel">EIIN:</strong> <span data-i18n="eiinVal">104237</span>
+                </span>
+                <span class="text-white/25">|</span>
+                <span><strong class="text-gold font-semibold" data-i18n="nuLabel">NU Code:</strong> <span data-i18n="nuVal">4303</span></span>
+                <span class="text-white/25 hidden lg:inline">|</span>
+                <a href="tel:+8801309104237" class="hidden lg:inline-flex items-center gap-1.5 hover:text-gold transition-colors">
+                    <i class="fa-solid fa-phone text-[10px] text-gold"></i> +880 1309-104237
+                </a>
+            </div>
+
+            <!-- Right: 1-Click Bilingual Switcher (EN / বাংলা) & 1-Click Dark/Light Toggle -->
+            <div class="flex items-center gap-2 sm:gap-3 ml-auto sm:ml-0">
+                <!-- Quick Student Portal -->
+                <a href="https://portal.htdc.edu.bd/accounts/login/student/" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-1.5 text-white/85 hover:text-gold transition-colors cursor-pointer mr-1">
+                    <i class="fa-solid fa-user-graduate text-gold text-[11px]"></i>
+                    <span data-i18n="studentPortal">Student Panel</span>
+                </a>
+
+                <!-- 1-Click Language Toggle Pill (English <-> বাংলা) -->
+                <button id="langToggleBtn" onclick="toggleLanguage()" aria-label="Switch Language"
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-gold/40 text-white font-semibold text-[11px] sm:text-xs transition-all cursor-pointer">
+                    <i class="fa-solid fa-globe text-gold text-[11px]"></i>
+                    <span id="langToggleText">বাংলা</span>
+                </button>
+
+                <!-- 1-Click Dark / Light Mode Toggle -->
+                <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark or Light Mode"
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-[11px] sm:text-xs transition-all cursor-pointer">
+                    <i id="themeIcon" class="fa-solid fa-moon text-gold text-[11px]"></i>
+                    <span id="themeText" class="hidden min-[400px]:inline" data-i18n="darkModeLabel">Dark</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         2. MAIN STICKY EDITORIAL HEADER & NAVIGATION
+    ====================================================================== -->
+    <header id="mainHeader" class="sticky top-0 z-40 glass-header transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 lg:h-24 gap-2">
+                
+                <!-- Official Logo + Institutional Title -->
+                <a href="#" class="flex items-center gap-2.5 sm:gap-3.5 group focus:outline-none min-w-0">
+                    <!-- Official Logo with Exact SVG Fallback -->
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex-shrink-0 rounded-full bg-white p-0.5 shadow-md ring-2 ring-gold/60 transition-transform duration-500 group-hover:scale-105 overflow-hidden flex items-center justify-center">
+                        <img src="https://htdc.edu.bd/images/logo.svg" alt="Hazera-Taju Degree College Official Logo"
+                             class="w-full h-full object-contain"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <!-- Custom High-Precision Vector Replica of Uploaded HTDC Logo -->
+                        <svg viewBox="0 0 200 200" class="w-full h-full hidden" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#E5A91A" stroke-width="6"/>
+                            <!-- Green Laurel Wreaths -->
+                            <path d="M56 146 C28 114, 30 58, 74 26" fill="none" stroke="#0E7C47" stroke-width="4.5" stroke-linecap="round"/>
+                            <path d="M144 146 C172 114, 170 58, 126 26" fill="none" stroke="#0E7C47" stroke-width="4.5" stroke-linecap="round"/>
+                            <!-- Rising Crimson Sun & Rays -->
+                            <circle cx="100" cy="64" r="7.5" fill="#D62828"/>
+                            <g stroke="#D62828" stroke-width="2">
+                                <line x1="100" y1="53" x2="100" y2="38"/>
+                                <line x1="92" y1="55" x2="82" y2="42"/>
+                                <line x1="108" y1="55" x2="118" y2="42"/>
+                                <line x1="86" y1="59" x2="70" y2="50"/>
+                                <line x1="114" y1="59" x2="130" y2="50"/>
+                            </g>
+                            <!-- Open Emerald Book -->
+                            <path d="M64 66 L98 74 L98 124 L64 116 Z" fill="#0E7C47"/>
+                            <path d="M136 66 L102 74 L102 124 L136 116 Z" fill="#0E7C47"/>
+                            <!-- White Atom & Star -->
+                            <ellipse cx="81" cy="95" rx="10" ry="4" transform="rotate(30 81 95)" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                            <ellipse cx="81" cy="95" rx="10" ry="4" transform="rotate(-30 81 95)" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                            <ellipse cx="81" cy="95" rx="10" ry="4" transform="rotate(90 81 95)" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+                            <polygon points="119,84 122,91 130,91 124,96 126,104 119,99 112,104 114,96 108,91 116,91" fill="#FFFFFF"/>
+                            <!-- Royal Blue Ribbon -->
+                            <path d="M40 132 Q100 114 160 132 L152 154 Q100 136 48 154 Z" fill="#14237A"/>
+                            <text x="100" y="139" text-anchor="middle" fill="#FFFFFF" font-size="10.5" font-weight="bold">হাজেরা-তজু ডিগ্রী কলেজ</text>
+                            <text x="100" y="170" text-anchor="middle" fill="#111827" font-size="12" font-weight="bold">জ্ঞানই শক্তি</text>
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col min-w-0">
+                        <span class="font-display font-bold text-royal-deep dark:text-white text-sm sm:text-lg lg:text-xl tracking-tight leading-tight truncate" data-i18n="collegeName">
+                            HAZERA-TAJU DEGREE COLLEGE
+                        </span>
+                        <span class="text-[10px] sm:text-xs text-emerald-htdc dark:text-gold font-semibold tracking-wider uppercase mt-0.5 truncate" data-i18n="collegeSub">
+                            Est. 1991 • Chandgaon, Chattogram
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center gap-4 2xl:gap-6 text-sm font-semibold text-royal-deep dark:text-slate-200 whitespace-nowrap">
+                    <a href="#leadership" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navLeadership">Leadership</a>
+                    <a href="#about" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navAbout">About</a>
+                    <a href="#academics" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navAcademics">Programs</a>
+                    <a href="#facilities" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navFacilities">Facilities</a>
+                    <a href="#notices" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors inline-flex items-center gap-1.5">
+                        <span data-i18n="navNotices">Notices</span>
+                        <span class="w-2 h-2 rounded-full bg-crimson-htdc animate-ping"></span>
+                    </a>
+                    <a href="#gallery" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navGallery">Gallery</a>
+                    <a href="#admissions" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navAdmissions">Admission</a>
+                    <a href="#location" class="editorial-link py-1 hover:text-emerald-htdc dark:hover:text-gold transition-colors" data-i18n="navContact">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA & Mobile Menu Toggle -->
+                <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                    <a href="#admissions" class="btn-luxury hidden sm:inline-flex items-center gap-2 bg-emerald-htdc hover:bg-emerald-dark text-white text-xs sm:text-sm font-semibold px-4 py-2.5 lg:px-5 lg:py-3 rounded-lg shadow-md border border-gold/40">
+                        <span data-i18n="applyNow">Apply Now</span>
+                        <i class="fa-solid fa-arrow-right text-gold-light text-xs"></i>
+                    </a>
+
+                    <!-- Mobile / Tablet Menu Button -->
+                    <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="xl:hidden p-2.5 rounded-lg text-royal-deep dark:text-white hover:bg-royal/10 dark:hover:bg-white/10 transition-colors focus:outline-none">
+                        <i id="mobileMenuIcon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile & Tablet Responsive Slide-Down Drawer -->
+        <div id="mobileDrawer" class="hidden xl:hidden bg-ivory dark:bg-midnight-card border-t border-royal/10 dark:border-gold/20 shadow-2xl max-h-[82vh] overflow-y-auto">
+            <div class="px-5 py-6 space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm sm:text-base font-semibold text-royal-deep dark:text-white">
+                    <a href="#leadership" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navLeadership">Leadership</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#about" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navAbout">About</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#academics" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navAcademics">Programs</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#facilities" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navFacilities">Facilities</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#notices" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span class="flex items-center gap-2"><span data-i18n="navNotices">Notices</span> <span class="w-2 h-2 rounded-full bg-crimson-htdc"></span></span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#gallery" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navGallery">Gallery</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#admissions" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navAdmissions">Admission</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                    <a href="#location" class="mobile-nav-link p-3 rounded-lg bg-white/60 dark:bg-white/5 flex justify-between items-center">
+                        <span data-i18n="navContact">Contact</span> <i class="fa-solid fa-chevron-right text-xs text-gold"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Quick Action Buttons -->
+                <div class="pt-3 border-t border-royal/10 dark:border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <a href="#admissions" class="mobile-nav-link w-full text-center bg-emerald-htdc text-white font-semibold py-3 rounded-lg shadow" data-i18n="applyAdmissionBtn">
+                        Online Admission
+                    </a>
+                    <a href="https://portal.htdc.edu.bd/accounts/login/student/" target="_blank" rel="noopener" class="mobile-nav-link w-full text-center bg-royal text-white font-semibold py-3 rounded-lg shadow cursor-pointer" data-i18n="studentPortal">
+                        Student Panel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         3. WELLESLEY-INSPIRED CINEMATIC HERO WITH CAMPUS PHOTO SLIDESHOW
+    ====================================================================== -->
+    <main id="main" tabindex="-1" class="outline-none">
+    <section class="relative overflow-hidden bg-royal-night text-white min-h-[580px] sm:min-h-[660px] lg:min-h-[740px] flex items-center">
+        <!-- Dynamic Hero Background Slideshow using Provided HTDC Campus Photos -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img id="heroBgImage"
+                src="https://htdc.edu.bd/storage/galleries/l08EWQ9IhcnBtc7nXdg27Gy36vafsg9vzfzqFrZR.jpg" 
+                onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=85'"
+                alt="Hazera-Taju Degree College Campus" 
+                class="w-full h-full object-cover object-center opacity-50 animate-hero-zoom transition-opacity duration-1000"
+            >
+            <!-- Logo-Harmonized Royal Blue + Emerald + Midnight Editorial Overlays -->
+            <div class="absolute inset-0 bg-gradient-to-r from-royal-night/95 via-royal-deep/80 to-royal-deep/35"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-royal-night via-transparent to-royal-night/40"></div>
+            <div class="absolute inset-0 hero-glow"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32 sm:pt-24 sm:pb-44 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Editorial Typography (8 cols) -->
+                <div class="lg:col-span-8">
+                    <!-- Motto Badge -->
+                    <div class="hero-badge inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-htdc/25 backdrop-blur-md border border-gold/50 text-gold-light text-[11px] sm:text-xs font-semibold tracking-[0.16em] uppercase mb-8 sm:mb-10 reveal active">
+                        <span class="w-2 h-2 rounded-full bg-crimson-htdc animate-pulse"></span>
+                        <span data-i18n="heroBadge">Est. 1991 • Chandgaon, Chattogram</span>
+                    </div>
+
+                    <h1 class="hero-headline font-serif font-bold text-white tracking-tight mb-7 sm:mb-8 reveal active reveal-delay-1" data-i18n="heroTitle">
+                        Quality Education, Moral Values &amp; Modern Technology.
+                    </h1>
+
+                    <div class="hero-rule mb-7 sm:mb-8 reveal active reveal-delay-1"></div>
+
+                    <p class="text-white/80 text-base sm:text-lg lg:text-xl font-light leading-[1.8] max-w-2xl mb-10 sm:mb-12 reveal active reveal-delay-2" data-i18n="heroSubtitle">Since 1991, Hazera-Taju Degree College in Chandgaon, Chattogram has offered HSC, Honours and Degree programs to about 4,000 students in a peaceful, disciplined and student-friendly environment.</p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 reveal active reveal-delay-3">
+                        <a href="#academics" class="btn-luxury btn-cta inline-flex items-center justify-center gap-4 font-bold text-base sm:text-lg pl-8 pr-3 py-3.5 rounded-full">
+                            <span data-i18n="heroBtnPrograms">Explore Academic Programs</span>
+                            <span class="cta-arrow"><i class="fa-solid fa-arrow-right text-xs"></i></span>
+                        </a>
+                        <a href="#notices" class="btn-luxury btn-ghost inline-flex items-center justify-center gap-3 font-medium text-sm sm:text-base px-7 py-4 rounded-full">
+                            <i class="fa-regular fa-bell text-gold"></i>
+                            <span data-i18n="heroBtnNotices">Official Notice Board</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Floating Crest & Quick Campus Switcher Card (4 cols on desktop) -->
+                <div class="hidden lg:flex lg:col-span-4 justify-end reveal reveal-delay-2">
+                    <div class="bg-gradient-to-b from-white/15 to-white/5 backdrop-blur-xl border border-gold/40 rounded-3xl p-7 max-w-xs w-full text-center shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] animate-float">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-white p-1.5 shadow-lg ring-4 ring-gold/50 mb-4 flex items-center justify-center">
+                            <img src="https://htdc.edu.bd/images/logo.svg" alt="HTDC Emblem" class="w-full h-full object-contain"
+                                 onerror="this.src='https://placehold.co/150x150/FFFFFF/14237A?text=HTDC'">
+                        </div>
+                        <h2 class="font-serif text-xl font-bold text-white" data-i18n="crestCardTitle">Hazera-Taju Degree College</h2>
+                        <p class="text-xs text-gold-light font-semibold tracking-wider uppercase mt-1" data-i18n="crestCardSub">Chandgaon, Chattogram</p>
+                        <div class="my-4 h-[1px] bg-white/15"></div>
+                        <div class="grid grid-cols-3 gap-2 text-xs">
+                            <div class="bg-royal-night/60 rounded-lg p-2">
+                                <span class="block text-gold font-bold">104237</span>
+                                <span class="text-[10px] text-white/70">EIIN</span>
+                            </div>
+                            <div class="bg-royal-night/60 rounded-lg p-2">
+                                <span class="block text-gold font-bold">4303</span>
+                                <span class="text-[10px] text-white/70">NU Code</span>
+                            </div>
+                            <div class="bg-royal-night/60 rounded-lg p-2">
+                                <span class="block text-gold font-bold">1991</span>
+                                <span class="text-[10px] text-white/70" data-i18n="estShort">Est.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="hero-edge"></div>
+    </section>
+
+    <!-- =====================================================================
+         4. ANIMATED INSTITUTIONAL STATISTICS BAR
+    ====================================================================== -->
+    <section class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-14 sm:-mt-16">
+        <div class="bg-white dark:bg-midnight-card rounded-2xl shadow-xl border border-royal/10 dark:border-gold/20 p-6 sm:p-8 lg:p-10 reveal transition-colors">
+            <div class="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-royal/10 dark:divide-white/10">
+                <div class="pt-2 sm:pt-0 sm:px-4 first:pl-0 text-center sm:text-left">
+                    <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-royal dark:text-gold mb-1">
+                        <span class="stat-counter" data-target="35">0</span>+
+                    </div>
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-htdc dark:text-emerald-light" data-i18n="stat1Title">Years of Legacy</div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 hidden sm:block" data-i18n="stat1Sub">Serving Chattogram since 1991</p>
+                </div>
+
+                <div class="pt-4 sm:pt-0 sm:px-6 text-center sm:text-left">
+                    <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-royal dark:text-gold mb-1">
+                        ≈&nbsp;<span class="stat-counter" data-target="4000">0</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-htdc dark:text-emerald-light" data-i18n="stat2Title">Enrolled Students</div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 hidden sm:block" data-i18n="stat2Sub">HSC, Honours &amp; Degree Tracks</p>
+                </div>
+
+                <div class="pt-4 lg:pt-0 sm:px-6 text-center sm:text-left">
+                    <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-royal dark:text-gold mb-1">
+                        <span class="stat-counter" data-target="9">0</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-htdc dark:text-emerald-light" data-i18n="stat3Title">Dedicated Faculty</div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 hidden sm:block" data-i18n="stat3Sub">Experienced academic mentors</p>
+                </div>
+
+                <div class="pt-4 lg:pt-0 sm:px-6 text-center sm:text-left">
+                    <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-royal dark:text-gold mb-1">
+                        <span class="stat-counter" data-target="9">0</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-emerald-htdc dark:text-emerald-light" data-i18n="stat4Title">Academic Programs</div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 hidden sm:block" data-i18n="stat4Sub">Science, Commerce &amp; Humanities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         5. LEADERSHIP SPOTLIGHT: FOUNDER & PRINCIPAL (WITH EXACT PORTRAITS)
+    ====================================================================== -->
+    <section id="leadership" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+                <div class="inline-flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                    <span data-i18n="leadershipEyebrow">Vision &amp; Governance</span>
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                </div>
+                <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-4" data-i18n="leadershipTitle">
+                    Institutional Leadership
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300" data-i18n="leadershipDesc">
+                    Guided by the enduring philanthropic vision of our esteemed Founder and the dedicated academic stewardship of our Principal.
+                </p>
+            </div>
+
+            <!-- Two-Column Editorial Leadership Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+                
+                <!-- 1. FOUNDER CARD: Al-haj Nurul Islam B.Sc. -->
+                <article class="bg-white dark:bg-midnight-card rounded-2xl p-6 sm:p-9 border border-royal/10 dark:border-gold/20 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+                            <!-- Founder Portrait -->
+                            <div class="w-32 h-36 sm:w-36 sm:h-40 rounded-2xl overflow-hidden border-2 border-gold shadow-md flex-shrink-0 bg-sky-100">
+                                <img 
+                                    src="https://htdc.edu.bd/storage/images/founder/tPLsjD6Cp1bBmVEay2wqKlNcV56QzWSFGLJTngHS.png" 
+                                    onerror="this.src='https://placehold.co/320x360/14237A/E5A91A?text=Al-haj+Nurul+Islam+B.Sc.'"
+                                    alt="Al-haj Nurul Islam B.Sc. - Founder of Hazera-Taju Degree College" 
+                                    class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                >
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <span class="inline-block px-3 py-1 rounded-full bg-gold/15 text-royal-deep dark:text-gold text-xs font-bold uppercase tracking-wider mb-2" data-i18n="founderRole">
+                                    Founder &amp; Patron
+                                </span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-royal-deep dark:text-white leading-tight" data-i18n="founderName">
+                                    Al-haj Nurul Islam B.Sc.
+                                </h3>
+                                <p class="text-xs sm:text-sm font-semibold text-emerald-htdc dark:text-emerald-light mt-1.5 leading-snug" data-i18n="founderDesignation">
+                                    Former Minister of Expatriates' Welfare and Overseas Employment, Government of the People's Republic of Bangladesh
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="relative bg-ivory dark:bg-midnight-elevated/70 p-5 rounded-xl border-l-4 border-gold">
+                            <p class="font-serif italic text-base sm:text-lg text-royal-deep dark:text-slate-100 leading-relaxed" data-i18n="founderQuote">He established the college in 1991, believing that quality education builds a peaceful, prosperous society and opens doors for underprivileged people. He encourages the use of modern technology to make college services accessible, transparent and convenient for students, guardians, teachers and the wider community.</p>
+                            <a href="https://htdc.edu.bd/founder" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-sm font-bold text-emerald-htdc dark:text-gold hover:underline"><span data-i18n="readFullMessage">Read the full message</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-royal/10 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                        <span data-i18n="founderLegacyTag">Established HTDC in 1991 • Chandgaon</span>
+                        <span class="text-gold font-bold">✦</span>
+                    </div>
+                </article>
+
+                <!-- 2. PRINCIPAL CARD: Mohammad Wahidul Alam -->
+                <article class="bg-white dark:bg-midnight-card rounded-2xl p-6 sm:p-9 border border-royal/10 dark:border-gold/20 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col justify-between reveal reveal-delay-1">
+                    <div>
+                        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+                            <!-- Principal Portrait -->
+                            <div class="w-32 h-36 sm:w-36 sm:h-40 rounded-2xl overflow-hidden border-2 border-emerald-htdc shadow-md flex-shrink-0 bg-slate-100">
+                                <img 
+                                    src="https://htdc.edu.bd/storage/images/principal/YBTwhrVJJzSPCiQ54aGpL6qoaFw9UQz7xFYpO2w5.jpg" 
+                                    onerror="this.src='https://placehold.co/320x360/0E7C47/FFFFFF?text=Mohammad+Wahidul+Alam'"
+                                    alt="Mohammad Wahidul Alam - Principal of Hazera-Taju Degree College" 
+                                    class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                                >
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <span class="inline-block px-3 py-1 rounded-full bg-emerald-htdc/15 text-emerald-htdc dark:text-emerald-light text-xs font-bold uppercase tracking-wider mb-2" data-i18n="principalRole">
+                                    Principal
+                                </span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-royal-deep dark:text-white leading-tight" data-i18n="principalName">
+                                    Mohammad Wahidul Alam
+                                </h3>
+                                <p class="text-xs sm:text-sm font-semibold text-royal dark:text-gold mt-1.5 leading-snug" data-i18n="principalDesignation">
+                                    Principal, Hazera-Taju Degree College, Chandgaon, Chattogram
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="relative bg-ivory dark:bg-midnight-elevated/70 p-5 rounded-xl border-l-4 border-emerald-htdc">
+                            <p class="font-serif italic text-base sm:text-lg text-royal-deep dark:text-slate-100 leading-relaxed" data-i18n="principalQuote">He stresses that education means intellectual, moral, social and physical growth, not grades alone. With about 4,000 students, the college gives special weight to computer education through its well-equipped lab, and its digital initiatives aim to keep students, guardians, teachers and alumni informed.</p>
+                            <a href="https://htdc.edu.bd/principal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-sm font-bold text-emerald-htdc dark:text-gold hover:underline"><span data-i18n="readFullMessage">Read the full message</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-royal/10 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                        <span data-i18n="principalOfficeTag">Office of the Principal • Academic Administration</span>
+                        <span class="text-emerald-htdc dark:text-emerald-light font-bold">✦</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+        <section id="people" class="py-20 sm:py-28 bg-ivory-warm dark:bg-midnight-card/50 border-y border-royal/10 dark:border-white/5 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <div class="inline-flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                    <span data-i18n="peopleEyebrow">Teachers & Staff</span>
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                </div>
+                <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-4" data-i18n="peopleTitle">Teachers, Staff & Governance</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300" data-i18n="peopleDesc">Official lists, vacancies and panels are kept up to date on the college website. Open any card to see the latest information.</p>
+            </div>
+            <div id="peopleGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 reveal"></div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         6. INTERACTIVE NOTICE BOARD (BILINGUAL + PRINTABLE LETTERHEAD)
+    ====================================================================== -->
+    <section id="notices" class="py-20 sm:py-28 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header & Category Filter Tabs -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 reveal">
+                <div>
+                    <div class="flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-[2px] bg-gold"></span>
+                        <span data-i18n="noticeEyebrow">Official Bulletin</span>
+                    </div>
+                    <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white tracking-tight" data-i18n="noticeTitle">
+                        Notice Board &amp; Circulars
+                    </h2>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div id="noticeFilterTabs" class="flex flex-wrap gap-2">
+                    <button data-filter="all" class="notice-tab active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-royal text-white shadow cursor-pointer" data-i18n="tabAll">
+                        All Notices
+                    </button>
+                    <button data-filter="Admission" class="notice-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer" data-i18n="tabAdmission">
+                        Admission
+                    </button>
+                    <button data-filter="Examination" class="notice-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer" data-i18n="tabExam">
+                        Examination
+                    </button>
+                    
+                    <button data-filter="Administrative" class="notice-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer" data-i18n="tabAdmin">
+                        Administrative
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Notice Cards Grid -->
+            <div id="noticesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal">
+                <!-- Rendered via JS -->
+            </div>
+            <div class="mt-10 flex flex-col items-center gap-3 text-center">
+                <p class="text-sm text-slate-500 dark:text-slate-400" data-i18n="noticeFileNote">Showing the 10 latest notices. Notice files are published in Bengali.</p>
+                <a href="https://htdc.edu.bd/notices" target="_blank" rel="noopener" class="btn-luxury inline-flex items-center gap-2 bg-royal hover:bg-royal-deep text-white font-semibold px-6 py-3.5 rounded-xl shadow-md">
+                    <span data-i18n="viewAllNotices">View all notices on the official site</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gold-light"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <section id="services" class="py-20 sm:py-28 bg-ivory-warm dark:bg-midnight-card/50 border-y border-royal/10 dark:border-white/5 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <div class="inline-flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                    <span data-i18n="servicesEyebrow">Student Services</span>
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                </div>
+                <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-4" data-i18n="servicesTitle">Results, Routines & Forms</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300" data-i18n="servicesDesc">Quick links to the services students use most.</p>
+            </div>
+            <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 reveal"></div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         7. HERITAGE & INSTITUTIONAL MISSION (WELLESLEY EDITORIAL)
+    ====================================================================== -->
+    <section id="about" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Image with Crest Card -->
+                <div class="lg:col-span-6 relative reveal">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-royal/15 dark:border-gold/25 aspect-[4/3]">
+                        <img 
+                            src="https://htdc.edu.bd/storage/galleries/GW5iOMtmtLI6PGjvqxCapa4NvOijyNQzRuyElkvT.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85'"
+                            alt="Hazera-Taju Degree College Campus" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        >
+                    </div>
+                    <div class="hidden sm:block absolute -bottom-6 -right-4 bg-royal-deep text-white p-6 rounded-2xl shadow-2xl max-w-xs border border-gold/40">
+                        <p class="font-serif italic text-lg text-gold-light leading-snug mb-1.5" data-i18n="heritageQuote">
+                            Quality education, modern technology, moral values and practical skills for a meaningful future.
+                        </p>
+                        <p class="text-xs uppercase tracking-widest text-white/75 font-semibold" data-i18n="heritageQuoteSub">
+                            Hazera-Taju Degree College • Est. 1991
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Editorial Narrative -->
+                <div class="lg:col-span-6 reveal reveal-delay-1">
+                    <div class="flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-[2px] bg-gold"></span>
+                        <span data-i18n="aboutEyebrow">Our Heritage &amp; Identity</span>
+                    </div>
+                    <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-6" data-i18n="aboutTitle">
+                        A Premier Seat of Higher Learning in Chattogram
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-5" data-i18n="aboutPara1">
+                        Established in 1991 in Chandgaon, Chattogram by visionary philanthropist Al-haj Nurul Islam B.Sc., Hazera-Taju Degree College (HTDC) stands as a distinguished center of academic discipline, moral enlightenment, and community service.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-8" data-i18n="aboutPara2">
+                        Affiliated with the Board of Intermediate and Secondary Education, Chattogram and the National University of Bangladesh (Code: 4303), the college nurtures thousands of students across HSC, Honours, and Degree (Pass) programs.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-5 border-t border-royal/10 dark:border-white/10">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-htdc/15 flex items-center justify-center text-emerald-htdc dark:text-emerald-light flex-shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-royal-deep dark:text-white text-sm" data-i18n="pillar1Title">Academic Excellence</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="pillar1Desc">Outstanding board &amp; university examination achievements.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center text-gold-rich dark:text-gold flex-shrink-0">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-royal-deep dark:text-white text-sm" data-i18n="pillar2Title">Discipline &amp; Ethics</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="pillar2Desc">Holistic mentorship rooted in patriotism and integrity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         8. ACADEMICS & DEPARTMENTS DIRECTORY (HSC / HONOURS / DEGREE)
+    ====================================================================== -->
+    <section id="academics" class="py-20 sm:py-28 bg-ivory-warm dark:bg-midnight-card/50 border-y border-royal/10 dark:border-white/5 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <div class="inline-flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                    <span data-i18n="acadEyebrow">Faculties &amp; Disciplines</span>
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                </div>
+                <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-4" data-i18n="acadTitle">
+                    Academic Programs
+                </h2>
+                <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base" data-i18n="acadSubtitle">
+                    Structured academic pathways designed to foster intellectual depth, research capability, and career readiness.
+                </p>
+            </div>
+
+            <!-- Tier Switcher -->
+            <div class="tier-switch flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12 reveal">
+                <button data-tier="hsc" class="academic-tier-btn active px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-royal text-white shadow-md cursor-pointer" data-i18n="tierHsc">
+                    Higher Secondary (HSC)
+                </button>
+                <button data-tier="honours" class="academic-tier-btn px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer" data-i18n="tierHonours">
+                    Undergraduate Honours (NU)
+                </button>
+                <button data-tier="degree" class="academic-tier-btn px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer" data-i18n="tierDegree">
+                    Degree (Pass) Courses
+                </button>
+            </div>
+
+            <!-- Departments Grid -->
+            <div id="departmentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal">
+                <!-- Rendered dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+        <section id="facilities" class="py-20 sm:py-28 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <div class="inline-flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                    <span data-i18n="facEyebrow">Campus Facilities</span>
+                    <span class="w-6 h-[2px] bg-gold"></span>
+                </div>
+                <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-4" data-i18n="facTitle">Facilities & Co-curricular Activities</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300" data-i18n="facDesc">Labs, library, connectivity and student organizations at HTDC.</p>
+            </div>
+            <div id="facilitiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 reveal"></div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         9. CAMPUS GALLERY & LIGHTBOX SHOWCASE (ALL 6 UNIQUE HTDC PHOTOS)
+    ====================================================================== -->
+    <section id="gallery" class="py-20 sm:py-28 bg-royal-deep dark:bg-royal-night text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-[2px] bg-gold"></span>
+                        <span data-i18n="galleryEyebrow">Campus Chronicles</span>
+                    </div>
+                    <h2 class="section-headline font-serif font-bold text-white" data-i18n="galleryTitle">
+                        Life &amp; Moments at HTDC
+                    </h2>
+                </div>
+                <p class="text-white/75 text-sm sm:text-base max-w-md" data-i18n="gallerySubtitle">
+                    Click any photograph to inspect full-resolution moments from our academic campus, seminars, and cultural celebrations.
+                </p>
+            </div>
+
+            <!-- 6-Photo Responsive Editorial Bento Gallery -->
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                <!-- Rendered via JS with Lightbox Modal Support -->
+            </div>
+            <div class="mt-10 text-center">
+                <a href="https://htdc.edu.bd/gallery" target="_blank" rel="noopener" class="btn-luxury btn-ghost inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full">
+                    <span data-i18n="viewFullGallery">View full gallery</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gold"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         10. ADMISSIONS & COUNSELING FORM
+    ====================================================================== -->
+    <section id="admissions" class="py-20 sm:py-28 bg-ivory dark:bg-midnight transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Guidelines -->
+                <div class="lg:col-span-6 reveal">
+                    <div class="flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-[2px] bg-gold"></span>
+                        <span data-i18n="admEyebrow">Admissions 2026–2027</span>
+                    </div>
+                    <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-5" data-i18n="admTitle">
+                        Begin Your Academic Journey
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-8" data-i18n="admSubtitle">
+                        Admissions follow the merit policies of the Board of Intermediate and Secondary Education, Chattogram (EIIN: 104237) and National University (College Code: 4303).
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="bg-white dark:bg-midnight-card p-5 rounded-xl border border-royal/10 dark:border-gold/20 shadow-sm flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-full bg-royal text-gold font-serif font-bold flex items-center justify-center flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-royal-deep dark:text-white text-base" data-i18n="step1Title">Higher Secondary (HSC) Admission</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1" data-i18n="step1Desc">
+                                    Select EIIN 104237 via the central XI Class Admission portal under Science, Business Studies, or Humanities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white dark:bg-midnight-card p-5 rounded-xl border border-royal/10 dark:border-gold/20 shadow-sm flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-full bg-emerald-htdc text-white font-serif font-bold flex items-center justify-center flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-royal-deep dark:text-white text-base" data-i18n="step2Title">Honours &amp; Degree (Pass) Admission</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1" data-i18n="step2Desc">
+                                    Apply via the National University portal selecting College Code 4303 for 7 Honours subjects or 3 Degree tracks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white dark:bg-midnight-card p-5 rounded-xl border border-royal/10 dark:border-gold/20 shadow-sm flex items-start gap-4">
+                            <div class="w-9 h-9 rounded-full bg-gold text-royal-night font-serif font-bold flex items-center justify-center flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-royal-deep dark:text-white text-base" data-i18n="step3Title">Merit Scholarships &amp; Stipends</h4>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1" data-i18n="step3Desc">
+                                    Generous tuition waivers for GPA 5.00 achievers and meritorious students from financially deserving families.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Counseling Form -->
+                <div class="lg:col-span-6 reveal reveal-delay-1">
+                    <div class="bg-white dark:bg-midnight-card rounded-2xl p-6 sm:p-10 shadow-xl border border-royal/10 dark:border-gold/25">
+                        <div class="border-b border-royal/10 dark:border-white/10 pb-5 mb-6">
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-royal-deep dark:text-white" data-i18n="formTitle">
+                                Admission Inquiry &amp; Counseling
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1" data-i18n="formSubtitle">
+                                Fill out your details and our Admission Desk will guide you with prospectus and eligibility info.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3">
+                            <a href="https://application.htdc.edu.bd/apply?program_id=1" target="_blank" rel="noopener" class="btn-luxury w-full bg-emerald-htdc hover:bg-emerald-dark text-white font-bold py-4 px-6 rounded-xl shadow-md flex items-center justify-between gap-3">
+                                <span class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-gold-light"></i><span data-i18n="portalHsc">Apply for HSC</span></span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <a href="https://application.htdc.edu.bd/apply?program_id=2" target="_blank" rel="noopener" class="btn-luxury w-full bg-royal hover:bg-royal-deep text-white font-bold py-4 px-6 rounded-xl shadow-md flex items-center justify-between gap-3">
+                                <span class="flex items-center gap-3"><i class="fa-solid fa-book-open text-gold-light"></i><span data-i18n="portalDegree">Apply for Degree</span></span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <a href="https://application.htdc.edu.bd/apply?program_id=3" target="_blank" rel="noopener" class="btn-luxury btn-cta w-full text-royal-night font-bold py-4 px-6 rounded-xl flex items-center justify-between gap-3">
+                                <span class="flex items-center gap-3"><i class="fa-solid fa-building-columns"></i><span data-i18n="portalHonours">Apply for Honours</span></span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <a href="https://application.htdc.edu.bd/employee/apply" target="_blank" rel="noopener" class="w-full text-center text-sm font-semibold text-royal dark:text-gold hover:underline py-3 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-briefcase text-xs"></i><span data-i18n="portalEmployee">Employee Application</span>
+                            </a>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 pt-4 border-t border-royal/10 dark:border-white/10">
+                                <span data-i18n="portalHelp">Need help? Call the college office:</span><br>
+                                <a href="tel:02334471018" class="font-bold text-emerald-htdc dark:text-gold">02334471018</a> &middot;
+                                <a href="tel:+8801309104237" class="font-bold text-emerald-htdc dark:text-gold">+880-1309104237</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <section id="location" class="py-20 sm:py-28 bg-ivory-warm dark:bg-midnight-card/50 border-y border-royal/10 dark:border-white/5 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                <div class="lg:col-span-5 reveal">
+                    <div class="flex items-center gap-2 text-emerald-htdc dark:text-gold text-xs font-bold uppercase tracking-widest mb-3">
+                        <span class="w-8 h-[2px] bg-gold"></span><span data-i18n="locEyebrow">Find Us</span>
+                    </div>
+                    <h2 class="section-headline font-serif font-bold text-royal-deep dark:text-white mb-6" data-i18n="locTitle">Visit the Campus</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-midnight-card p-4 rounded-xl border border-royal/10 dark:border-gold/20">
+                            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+                            <div><p class="text-xs font-bold uppercase tracking-wider text-emerald-htdc dark:text-gold" data-i18n="labelAddress">Address</p><p class="text-royal-deep dark:text-white font-semibold" data-i18n="addrValue">B.Sc Chattar, Chandgaon, Chattogram</p></div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-midnight-card p-4 rounded-xl border border-royal/10 dark:border-gold/20">
+                            <i class="fa-solid fa-phone text-gold mt-1"></i>
+                            <div><p class="text-xs font-bold uppercase tracking-wider text-emerald-htdc dark:text-gold" data-i18n="labelTelephone">Telephone</p><a href="tel:02334471018" class="text-royal-deep dark:text-white font-semibold">02334471018</a></div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-midnight-card p-4 rounded-xl border border-royal/10 dark:border-gold/20">
+                            <i class="fa-solid fa-mobile-screen text-gold mt-1"></i>
+                            <div><p class="text-xs font-bold uppercase tracking-wider text-emerald-htdc dark:text-gold" data-i18n="labelCell">Mobile</p><a href="tel:+8801309104237" class="text-royal-deep dark:text-white font-semibold">+880-1309104237</a></div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-midnight-card p-4 rounded-xl border border-royal/10 dark:border-gold/20">
+                            <i class="fa-solid fa-envelope text-gold mt-1"></i>
+                            <div class="min-w-0"><p class="text-xs font-bold uppercase tracking-wider text-emerald-htdc dark:text-gold" data-i18n="labelEmail">E-mail</p><a href="mailto:info@htdc.edu.bd" class="text-royal-deep dark:text-white font-semibold break-all">info@htdc.edu.bd</a></div>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=22.3779746,91.8539242" target="_blank" rel="noopener" class="btn-luxury inline-flex items-center gap-2 mt-6 bg-emerald-htdc hover:bg-emerald-dark text-white font-semibold px-6 py-3.5 rounded-xl shadow-md">
+                        <i class="fa-solid fa-diamond-turn-right"></i><span data-i18n="openMaps">Open in Google Maps</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 reveal reveal-delay-1">
+                    <div class="rounded-2xl overflow-hidden shadow-xl border border-royal/15 dark:border-gold/25 h-full min-h-[320px] bg-white">
+                        <iframe title="HTDC location map" src="https://www.google.com/maps?q=22.3779746,91.8539242&amp;hl=en&amp;z=16&amp;output=embed" class="w-full h-full min-h-[320px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         11. INSTITUTIONAL FOOTER
+    ====================================================================== -->
+    </main>
+    <footer id="contact" class="bg-royal-night text-white/85 pt-16 pb-10 border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-white/10">
+                
+                <!-- Col 1: Logo & Contact -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-full bg-white p-0.5 ring-2 ring-gold flex-shrink-0 overflow-hidden">
+                            <img src="https://htdc.edu.bd/images/logo.svg" alt="HTDC Logo" class="w-full h-full object-contain"
+                                 onerror="this.src='https://placehold.co/100x100/FFFFFF/14237A?text=HTDC'">
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg" data-i18n="collegeName">
+                                HAZERA-TAJU DEGREE COLLEGE
+                            </h3>
+                            <p class="text-xs text-gold" data-i18n="footerAddressShort">Chandgaon, Chattogram</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white/70 leading-relaxed" data-i18n="footerDesc">
+                        Founded in 1991 by Al-haj Nurul Islam B.Sc., Hazera-Taju Degree College is dedicated to cultivating wisdom, ethical character, and academic distinction.
+                    </p>
+                    <div class="space-y-2 text-xs sm:text-sm pt-1">
+                        <p class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+                            <span data-i18n="footerFullAddr">B.Sc Chattar, Chandgaon, Chattogram, Bangladesh</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-gold"></i>
+                            <span><a href="tel:02334471018" class="hover:text-gold transition-colors">02334471018</a> &middot; <a href="tel:+8801309104237" class="hover:text-gold transition-colors">+880-1309104237</a></span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope text-gold"></i>
+                            <a href="mailto:info@htdc.edu.bd" class="hover:text-gold transition-colors">info@htdc.edu.bd</a>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-facebook text-gold"></i>
+                            <a href="https://www.facebook.com/htdccollege" target="_blank" rel="noopener" class="hover:text-gold transition-colors">facebook.com/htdccollege</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="lg:col-span-3">
+                    <h4 class="font-serif text-lg font-bold text-white mb-4" data-i18n="footerQuickLinks">Quick Navigation</h4>
+                    <ul class="space-y-2.5 text-sm text-white/75">
+                        <li><a href="#leadership" class="hover:text-gold transition-colors" data-i18n="navLeadership">Founder &amp; Principal</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors" data-i18n="navAbout">About HTDC</a></li>
+                        <li><a href="#academics" class="hover:text-gold transition-colors" data-i18n="navAcademics">Academic Programs</a></li>
+                        <li><a href="#notices" class="hover:text-gold transition-colors" data-i18n="navNotices">Notice Board</a></li>
+                        <li><a href="#gallery" class="hover:text-gold transition-colors" data-i18n="navGallery">Gallery</a></li>
+                        <li><a href="#facilities" class="hover:text-gold transition-colors" data-i18n="navFacilities">Facilities</a></li>
+                        <li><a href="#admissions" class="hover:text-gold transition-colors" data-i18n="navAdmissions">Admission</a></li>
+                        <li><a href="#location" class="hover:text-gold transition-colors" data-i18n="navContact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Institutional Identity -->
+                <div class="lg:col-span-4">
+                    <h4 class="font-serif text-lg font-bold text-white mb-4" data-i18n="footerIdentity">Institutional Codes</h4>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2.5 text-xs sm:text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-white/65" data-i18n="eiinLabel">College EIIN:</span>
+                            <span class="font-bold text-gold" data-i18n="eiinVal">104237</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-white/65" data-i18n="nuLabel">National University Code:</span>
+                            <span class="font-bold text-white" data-i18n="nuVal">4303</span>
+                        </div>
+                        
+                        <div class="pt-2 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-white/65">Official Website:</span>
+                            <a href="https://htdc.edu.bd" target="_blank" rel="noopener" class="text-emerald-light hover:underline font-semibold">htdc.edu.bd</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-8 border-b border-white/10">
+                <h4 class="font-serif text-lg font-bold text-white mb-3" data-i18n="usefulLinks">Useful Links</h4>
+                <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-white/75"><a href="https://www.bise-ctg.gov.bd" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">Chittagong Education Board</a><a href="https://www.nubd.info" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">National University</a><a href="https://app1.nu.edu.bd" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">NU Admission</a><a href="https://results.techedu.gov.bd" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">NU Result</a><a href="http://www.dshe.gov.bd" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">DSHE</a><a href="http://www.bou.ac.bd" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">Bangladesh Open University</a><a href="https://sonalibank.com.bd" target="_blank" rel="noopener" class="hover:text-gold transition-colors py-1">Sonali Bank</a></div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/60 text-center sm:text-left">
+                <p data-i18n="copyright">&copy; 2026 Hazera-Taju Degree College. All rights reserved.</p>
+                <p class="text-gold font-semibold" data-i18n="footerAddressShort">Chandgaon, Chattogram</p>
+            </div>
+
+            <!-- About the Creators -->
+            <section aria-labelledby="creatorsTitle" class="mt-10 pt-8 border-t border-white/10">
+                <h4 id="creatorsTitle" class="text-center text-[11px] font-semibold uppercase tracking-[0.3em] text-gold/90 mb-8">About the Creators</h4>
+                <div class="grid sm:grid-cols-2 gap-8 sm:gap-6 max-w-3xl mx-auto text-center">
+                    <div class="flex flex-col items-center">
+                        <p class="font-serif text-xl font-bold text-white">Tahmim Sadman</p>
+                        <p class="text-xs text-gold/80 tracking-wider mt-0.5">HSC-27</p>
+                        <p class="text-sm text-white/65 mt-2">Website Design &amp; Development</p>
+                        <div class="flex items-center justify-center gap-3 mt-4">
+                            <a href="mailto:tahmimsadman@gmail.com" aria-label="Email Tahmim Sadman" title="Email" class="w-9 h-9 rounded-full border border-white/15 text-white/70 hover:text-gold hover:border-gold/60 hover:bg-gold/10 flex items-center justify-center transition-all duration-200"><i class="fa-solid fa-envelope text-sm"></i></a>
+                            <a href="https://facebook.com/tahmim.sadman" target="_blank" rel="noopener noreferrer" aria-label="Tahmim Sadman on Facebook" title="Facebook" class="w-9 h-9 rounded-full border border-white/15 text-white/70 hover:text-gold hover:border-gold/60 hover:bg-gold/10 flex items-center justify-center transition-all duration-200"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center sm:border-l sm:border-white/10 sm:pl-6">
+                        <p class="font-serif text-xl font-bold text-white">Taskin Apnan</p>
+                        <p class="text-xs text-gold/80 tracking-wider mt-0.5">HSC-27</p>
+                        <p class="text-sm text-white/65 mt-2">Contributor</p>
+                        <p class="text-xs text-white/50 italic mt-1">With inspiration for this project.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         12. OFFICIAL PRINTABLE NOTICE VIEWER MODAL
+    ====================================================================== -->
+    <!-- =====================================================================
+         13. DEPARTMENT SYLLABUS & PORTAL DETAIL MODAL
+    ====================================================================== -->
+    <div id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-royal-night/80 backdrop-blur-sm">
+        <div class="bg-white dark:bg-midnight-card rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-royal/15 dark:border-gold/30 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-start gap-4 border-b border-royal/10 dark:border-white/10 pb-4 mb-5">
+                <div>
+                    <span id="detailBadge" class="text-[11px] font-bold uppercase tracking-widest text-emerald-htdc dark:text-gold block mb-1">Overview</span>
+                    <h3 id="detailTitle" class="font-serif text-2xl sm:text-3xl font-bold text-royal-deep dark:text-white">Title</h3>
+                </div>
+                <button onclick="closeDetailModal()" aria-label="Close" class="w-8 h-8 rounded-lg bg-royal/10 dark:bg-white/10 text-royal-deep dark:text-white flex items-center justify-center cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="detailContent" class="text-sm sm:text-base text-slate-600 dark:text-slate-300 space-y-4 mb-6 leading-relaxed"></div>
+            <div class="flex justify-end gap-3">
+                <button onclick="closeDetailModal()" class="px-5 py-2.5 rounded-xl border border-royal/20 dark:border-white/20 text-royal-deep dark:text-white text-sm font-semibold cursor-pointer" data-i18n="btnClose">Close</button>
+                <a href="#admissions" onclick="closeDetailModal()" class="px-5 py-2.5 rounded-xl bg-emerald-htdc text-white text-sm font-semibold" data-i18n="applyNow">Apply Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         14. FULLSCREEN GALLERY LIGHTBOX MODAL
+    ====================================================================== -->
+    <div id="lightboxModal" role="dialog" aria-modal="true" aria-label="Gallery preview" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md">
+        <div class="relative max-w-4xl w-full">
+            <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute -top-11 right-0 text-white hover:text-gold text-2xl p-2 cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="HTDC Gallery Preview" class="w-full max-h-[78vh] object-contain rounded-xl shadow-2xl border border-gold/40 mx-auto">
+            <p id="lightboxCaption" class="text-center text-white font-serif text-lg sm:text-xl mt-4"></p>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         JAVASCRIPT: BILINGUAL DICTIONARY (EN / BN), DARK MODE, GALLERY & LOGIC
+    ====================================================================== -->
+    <script>
+        const store = {
+            get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+            set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+        };
+        let currentLang = store.get('htdc_lang') || 'en';
+        let currentNoticeFilter = 'all';
+        let currentAcademicTier = 'hsc';
+
+        // 1. Complete Bilingual UI Translation Dictionary (English <-> বাংলা)
+        const i18n = {
+            en: {"eiinLabel": "EIIN:", "eiinVal": "104237", "nuLabel": "NU Code:", "nuVal": "4303", "studentPortal": "Student Panel", "darkModeLabel": "Dark", "lightModeLabel": "Light", "collegeName": "HAZERA-TAJU DEGREE COLLEGE", "collegeSub": "Est. 1991 • Chandgaon, Chattogram", "navLeadership": "Leadership", "navAbout": "About", "navAcademics": "Programs", "navFacilities": "Facilities", "navNotices": "Notices", "navGallery": "Gallery", "navAdmissions": "Admission", "navContact": "Contact", "applyNow": "Apply Now", "applyAdmissionBtn": "Online Admission", "heroBadge": "Est. 1991 • Chandgaon, Chattogram", "heroTitle": "Quality Education, Moral Values & Modern Technology.", "heroSubtitle": "Since 1991, Hazera-Taju Degree College in Chandgaon, Chattogram has offered HSC, Honours and Degree programs to about 4,000 students in a peaceful, disciplined and student-friendly environment.", "heroBtnPrograms": "Explore Academic Programs", "heroBtnNotices": "Official Notice Board", "crestCardTitle": "Hazera-Taju Degree College", "crestCardSub": "Chandgaon, Chattogram", "stat1Title": "Years of Legacy", "stat1Sub": "Serving Chattogram since 1991", "stat2Title": "Students (approx.)", "stat2Sub": "HSC, Honours & Degree", "stat3Title": "Campus Facilities", "stat3Sub": "Labs, library, clubs & more", "stat4Title": "Academic Programs", "stat4Sub": "Across HSC, Honours & Degree", "leadershipEyebrow": "Founder & Principal", "leadershipTitle": "Messages from Our Leadership", "leadershipDesc": "A short summary of the messages published on the official college website.", "founderRole": "Founder", "founderName": "Al-haj Nurul Islam B.Sc.", "founderDesignation": "Minister of Expatriates' Welfare and Overseas Employment", "founderQuote": "He established the college in 1991, believing that quality education builds a peaceful, prosperous society and opens doors for underprivileged people. He encourages the use of modern technology to make college services accessible, transparent and convenient for students, guardians, teachers and the wider community.", "founderLegacyTag": "Message summary • Founder", "principalRole": "Principal", "principalName": "Mohammad Wahidul Alam", "principalDesignation": "Principal, Hazera-Taju Degree College", "principalQuote": "He stresses that education means intellectual, moral, social and physical growth, not grades alone. With about 4,000 students, the college gives special weight to computer education through its well-equipped lab, and its digital initiatives aim to keep students, guardians, teachers and alumni informed.", "principalOfficeTag": "Message summary • Principal", "readFullMessage": "Read the full message", "peopleEyebrow": "Teachers & Staff", "peopleTitle": "Teachers, Staff & Governance", "peopleDesc": "Official lists, vacancies and panels are kept up to date on the college website. Open any card to see the latest information.", "openOfficial": "Open on official site", "noticeEyebrow": "Official Bulletin", "noticeTitle": "Notice Board & Circulars", "tabAll": "All Notices", "tabAdmission": "Admission", "tabExam": "Examination", "tabAdmin": "Administrative", "readCircular": "View Notice", "viewAllNotices": "View all notices on the official site", "noticeFileNote": "Showing the 10 latest notices. Notice files are published in Bengali.", "servicesEyebrow": "Student Services", "servicesTitle": "Results, Routines & Forms", "servicesDesc": "Quick links to the services students use most.", "aboutEyebrow": "About the College", "aboutTitle": "A Well-Established College in Chandgaon, Chattogram", "aboutPara1": "Established in 1991, Hazera-Taju Degree College supports the intellectual, moral, social and personal growth of its students. It offers a peaceful, disciplined and student-friendly place to gain knowledge, build practical skills and prepare for higher education and professional life.", "aboutPara2": "The college serves about 4,000 students through HSC, Honours and Degree programs and gives special emphasis to computer education, with a spacious computer laboratory and modern technology in its academic and administrative services.", "heritageQuote": "Quality education, modern technology, moral values and practical skills for a meaningful future.", "heritageQuoteSub": "Our Vision • Est. 1991", "pillar1Title": "Computer & ICT Education", "pillar1Desc": "A spacious computer lab for hands-on digital skills.", "pillar2Title": "Equal Opportunity", "pillar2Desc": "A peaceful, disciplined, student-friendly environment for everyone.", "acadEyebrow": "Programs", "acadTitle": "Academic Programs", "acadSubtitle": "HSC groups, Honours departments and Degree programs offered at HTDC.", "tierHsc": "Higher Secondary (HSC)", "tierHonours": "Honours", "tierDegree": "Degree (Pass)", "syllabusBtn": "Program Details", "facEyebrow": "Campus Facilities", "facTitle": "Facilities & Co-curricular Activities", "facDesc": "Labs, library, connectivity and student organizations at HTDC.", "galleryEyebrow": "Photo Gallery", "galleryTitle": "Life & Moments at HTDC", "gallerySubtitle": "Tap any photo to view it larger. More photos are in the official gallery.", "viewFullGallery": "View full gallery", "admEyebrow": "Online Admission", "admTitle": "Begin Your Academic Journey", "admSubtitle": "Admission applications are submitted through the college's official online admission portal. Choose your program to start.", "step1Title": "HSC Admission", "step1Desc": "Apply online through the college admission portal. Watch the Notice Board for Class XI admission and registration updates.", "step2Title": "Honours & Degree Admission", "step2Desc": "Apply through the college portal for Honours or Degree. National University admission information is available at app1.nu.edu.bd.", "step3Title": "Notices, Forms & Results", "step3Desc": "Admission schedules, registration notices and downloadable forms are posted on the Notice Board and the Form Download page.", "formTitle": "Start Your Online Application", "formSubtitle": "You will be taken to the official application portal (application.htdc.edu.bd).", "portalHsc": "Apply for HSC", "portalDegree": "Apply for Degree", "portalHonours": "Apply for Honours", "portalEmployee": "Employee Application", "portalHelp": "Need help? Call the college office:", "locEyebrow": "Find Us", "locTitle": "Visit the Campus", "labelAddress": "Address", "addrValue": "B.Sc Chattar, Chandgaon, Chattogram", "labelTelephone": "Telephone", "labelCell": "Mobile", "labelEmail": "E-mail", "openMaps": "Open in Google Maps", "footerAddressShort": "Chandgaon, Chattogram", "footerDesc": "A non-political educational institution committed to quality education. Founded in 1991 by Al-haj Nurul Islam B.Sc.", "footerFullAddr": "B.Sc Chattar, Chandgaon, Chattogram, Bangladesh", "footerQuickLinks": "Quick Navigation", "footerIdentity": "Institutional Codes", "usefulLinks": "Useful Links", "copyright": "© 2026 Hazera-Taju Degree College. All rights reserved.", "modalCircularTag": "Official Circular", "btnPrint": "Print / PDF", "btnClose": "Close", "howToApply": "How to apply", "howToApplyText": "Apply through the official online admission portal.", "openDeptPage": "Open the official page", "estShort": "Est."},
+            bn: {"eiinLabel": "ইআইআইএন:", "eiinVal": "১০৪২৩৭", "nuLabel": "এনইউ কোড:", "nuVal": "৪৩০৩", "studentPortal": "শিক্ষার্থী প্যানেল", "darkModeLabel": "ডার্ক", "lightModeLabel": "লাইট", "collegeName": "হাজেরা-তজু ডিগ্রী কলেজ", "collegeSub": "প্রতিষ্ঠিত ১৯৯১ • চান্দগাঁও, চট্টগ্রাম", "navLeadership": "নেতৃত্ব", "navAbout": "পরিচিতি", "navAcademics": "শিক্ষাক্রম", "navFacilities": "সুবিধাসমূহ", "navNotices": "নোটিশ", "navGallery": "গ্যালারি", "navAdmissions": "ভর্তি", "navContact": "যোগাযোগ", "applyNow": "আবেদন করুন", "applyAdmissionBtn": "অনলাইন ভর্তি", "heroBadge": "প্রতিষ্ঠিত ১৯৯১ • চান্দগাঁও, চট্টগ্রাম", "heroTitle": "মানসম্মত শিক্ষা, নৈতিক মূল্যবোধ ও আধুনিক প্রযুক্তি।", "heroSubtitle": "১৯৯১ সাল থেকে চট্টগ্রামের চান্দগাঁওয়ে হাজেরা-তজু ডিগ্রী কলেজ প্রায় ৪,০০০ শিক্ষার্থীকে শান্ত, সুশৃঙ্খল ও শিক্ষার্থীবান্ধব পরিবেশে এইচএসসি, অনার্স ও ডিগ্রী শিক্ষা দিয়ে আসছে।", "heroBtnPrograms": "শিক্ষাক্রম দেখুন", "heroBtnNotices": "অফিসিয়াল নোটিশ বোর্ড", "crestCardTitle": "হাজেরা-তজু ডিগ্রী কলেজ", "crestCardSub": "চান্দগাঁও, চট্টগ্রাম", "stat1Title": "বছরের ঐতিহ্য", "stat1Sub": "১৯৯১ সাল থেকে চট্টগ্রামে", "stat2Title": "শিক্ষার্থী (প্রায়)", "stat2Sub": "এইচএসসি, অনার্স ও ডিগ্রী", "stat3Title": "ক্যাম্পাস সুবিধা", "stat3Sub": "ল্যাব, লাইব্রেরি, ক্লাব ও আরও", "stat4Title": "শিক্ষাক্রম", "stat4Sub": "এইচএসসি, অনার্স ও ডিগ্রী জুড়ে", "leadershipEyebrow": "প্রতিষ্ঠাতা ও অধ্যক্ষ", "leadershipTitle": "আমাদের নেতৃত্বের বার্তা", "leadershipDesc": "কলেজের অফিসিয়াল ওয়েবসাইটে প্রকাশিত বার্তার সংক্ষিপ্ত সারাংশ।", "founderRole": "প্রতিষ্ঠাতা", "founderName": "আলহাজ্ব নুরুল ইসলাম বি.এসসি.", "founderDesignation": "প্রবাসী কল্যাণ ও বৈদেশিক কর্মসংস্থান মন্ত্রী", "founderQuote": "তিনি ১৯৯১ সালে কলেজটি প্রতিষ্ঠা করেন এই বিশ্বাস থেকে যে মানসম্মত শিক্ষা একটি শান্তিপূর্ণ ও সমৃদ্ধ সমাজ গড়ে তোলে এবং সুবিধাবঞ্চিত মানুষের জন্য সুযোগ তৈরি করে। শিক্ষার্থী, অভিভাবক, শিক্ষক ও সমাজের জন্য কলেজের সেবা সহজলভ্য, স্বচ্ছ ও সুবিধাজনক করতে তিনি আধুনিক প্রযুক্তি ব্যবহারে উৎসাহ দেন।", "founderLegacyTag": "বার্তার সারসংক্ষেপ • প্রতিষ্ঠাতা", "principalRole": "অধ্যক্ষ", "principalName": "মোহাম্মদ ওয়াহিদুল আলম", "principalDesignation": "অধ্যক্ষ, হাজেরা-তজু ডিগ্রী কলেজ", "principalQuote": "তিনি বলেন, শিক্ষা মানে শুধু ভালো ফলাফল নয়, বরং বুদ্ধিবৃত্তিক, নৈতিক, সামাজিক ও শারীরিক বিকাশও। প্রায় ৪,০০০ শিক্ষার্থীর এই কলেজে সুসজ্জিত ল্যাবের মাধ্যমে কম্পিউটার শিক্ষাকে বিশেষ গুরুত্ব দেওয়া হয় এবং ডিজিটাল উদ্যোগের লক্ষ্য শিক্ষার্থী, অভিভাবক, শিক্ষক ও প্রাক্তনদের তথ্য সহজে পৌঁছে দেওয়া।", "principalOfficeTag": "বার্তার সারসংক্ষেপ • অধ্যক্ষ", "readFullMessage": "সম্পূর্ণ বার্তা পড়ুন", "peopleEyebrow": "শিক্ষক ও কর্মকর্তা", "peopleTitle": "শিক্ষক, কর্মচারী ও পরিচালনা", "peopleDesc": "অফিসিয়াল তালিকা, শূন্যপদ ও প্যানেল কলেজের ওয়েবসাইটে হালনাগাদ থাকে। সর্বশেষ তথ্য দেখতে যেকোনো কার্ডে ক্লিক করুন।", "openOfficial": "অফিসিয়াল সাইটে দেখুন", "noticeEyebrow": "অফিসিয়াল বিজ্ঞপ্তি", "noticeTitle": "নোটিশ বোর্ড ও বিজ্ঞপ্তি", "tabAll": "সব নোটিশ", "tabAdmission": "ভর্তি", "tabExam": "পরীক্ষা", "tabAdmin": "প্রশাসনিক", "readCircular": "নোটিশ দেখুন", "viewAllNotices": "অফিসিয়াল সাইটে সব নোটিশ দেখুন", "noticeFileNote": "সর্বশেষ ১০টি নোটিশ দেখানো হচ্ছে। নোটিশের ফাইল বাংলায় প্রকাশিত।", "servicesEyebrow": "শিক্ষার্থী সেবা", "servicesTitle": "ফলাফল, রুটিন ও ফরম", "servicesDesc": "শিক্ষার্থীদের সবচেয়ে প্রয়োজনীয় সেবার দ্রুত লিংক।", "aboutEyebrow": "কলেজ পরিচিতি", "aboutTitle": "চট্টগ্রামের চান্দগাঁওয়ের একটি প্রতিষ্ঠিত কলেজ", "aboutPara1": "১৯৯১ সালে প্রতিষ্ঠিত হাজেরা-তজু ডিগ্রী কলেজ শিক্ষার্থীদের বুদ্ধিবৃত্তিক, নৈতিক, সামাজিক ও ব্যক্তিগত বিকাশে কাজ করে। শান্ত, সুশৃঙ্খল ও শিক্ষার্থীবান্ধব পরিবেশে জ্ঞান অর্জন, ব্যবহারিক দক্ষতা তৈরি এবং উচ্চশিক্ষা ও পেশাজীবনের প্রস্তুতি নেওয়ার সুযোগ এখানে রয়েছে।", "aboutPara2": "কলেজটি এইচএসসি, অনার্স ও ডিগ্রী প্রোগ্রামের মাধ্যমে প্রায় ৪,০০০ শিক্ষার্থীকে সেবা দেয়। প্রশস্ত কম্পিউটার ল্যাব এবং একাডেমিক ও প্রশাসনিক সেবায় আধুনিক প্রযুক্তির ব্যবহারসহ কম্পিউটার শিক্ষাকে বিশেষ গুরুত্ব দেওয়া হয়।", "heritageQuote": "মানসম্মত শিক্ষা, আধুনিক প্রযুক্তি, নৈতিক মূল্যবোধ ও ব্যবহারিক দক্ষতার মাধ্যমে অর্থবহ ভবিষ্যৎ।", "heritageQuoteSub": "আমাদের লক্ষ্য • প্রতিষ্ঠিত ১৯৯১", "pillar1Title": "কম্পিউটার ও আইসিটি শিক্ষা", "pillar1Desc": "ব্যবহারিক ডিজিটাল দক্ষতার জন্য প্রশস্ত কম্পিউটার ল্যাব।", "pillar2Title": "সমান সুযোগ", "pillar2Desc": "সবার জন্য শান্ত, সুশৃঙ্খল ও শিক্ষার্থীবান্ধব পরিবেশ।", "acadEyebrow": "শিক্ষাক্রম", "acadTitle": "একাডেমিক প্রোগ্রাম", "acadSubtitle": "এইচটিডিসি-তে প্রদত্ত এইচএসসি গ্রুপ, অনার্স বিভাগ ও ডিগ্রী প্রোগ্রাম।", "tierHsc": "উচ্চ মাধ্যমিক (এইচএসসি)", "tierHonours": "অনার্স", "tierDegree": "ডিগ্রী (পাস)", "syllabusBtn": "বিস্তারিত", "facEyebrow": "ক্যাম্পাস সুবিধা", "facTitle": "সুবিধা ও সহ-শিক্ষাক্রমিক কার্যক্রম", "facDesc": "এইচটিডিসি-র ল্যাব, লাইব্রেরি, ইন্টারনেট ও শিক্ষার্থী সংগঠন।", "galleryEyebrow": "ফটো গ্যালারি", "galleryTitle": "এইচটিডিসি-র মুহূর্তগুলো", "gallerySubtitle": "বড় করে দেখতে ছবিতে ট্যাপ করুন। আরও ছবি অফিসিয়াল গ্যালারিতে আছে।", "viewFullGallery": "পুরো গ্যালারি দেখুন", "admEyebrow": "অনলাইন ভর্তি", "admTitle": "আপনার শিক্ষাযাত্রা শুরু করুন", "admSubtitle": "ভর্তির আবেদন কলেজের অফিসিয়াল অনলাইন ভর্তি পোর্টালের মাধ্যমে জমা দিতে হয়। শুরু করতে আপনার প্রোগ্রাম বেছে নিন।", "step1Title": "এইচএসসি ভর্তি", "step1Desc": "কলেজের ভর্তি পোর্টালে অনলাইনে আবেদন করুন। একাদশ শ্রেণির ভর্তি ও রেজিস্ট্রেশনের হালনাগাদ নোটিশ বোর্ডে দেখুন।", "step2Title": "অনার্স ও ডিগ্রী ভর্তি", "step2Desc": "অনার্স বা ডিগ্রীর জন্য কলেজ পোর্টালে আবেদন করুন। জাতীয় বিশ্ববিদ্যালয়ের ভর্তি তথ্য app1.nu.edu.bd সাইটে পাবেন।", "step3Title": "নোটিশ, ফরম ও ফলাফল", "step3Desc": "ভর্তির সময়সূচি, রেজিস্ট্রেশন নোটিশ ও ডাউনলোডযোগ্য ফরম নোটিশ বোর্ড এবং ফরম ডাউনলোড পেজে দেওয়া হয়।", "formTitle": "অনলাইন আবেদন শুরু করুন", "formSubtitle": "আপনাকে অফিসিয়াল আবেদন পোর্টালে (application.htdc.edu.bd) নিয়ে যাওয়া হবে।", "portalHsc": "এইচএসসি-তে আবেদন", "portalDegree": "ডিগ্রীতে আবেদন", "portalHonours": "অনার্সে আবেদন", "portalEmployee": "চাকরির আবেদন", "portalHelp": "সহায়তা দরকার? কলেজ অফিসে ফোন করুন:", "locEyebrow": "ঠিকানা", "locTitle": "ক্যাম্পাসে আসুন", "labelAddress": "ঠিকানা", "addrValue": "বি.এসসি. চত্বর, চান্দগাঁও, চট্টগ্রাম", "labelTelephone": "টেলিফোন", "labelCell": "মোবাইল", "labelEmail": "ইমেইল", "openMaps": "গুগল ম্যাপে খুলুন", "footerAddressShort": "চান্দগাঁও, চট্টগ্রাম", "footerDesc": "মানসম্মত শিক্ষায় প্রতিশ্রুতিবদ্ধ একটি অরাজনৈতিক শিক্ষাপ্রতিষ্ঠান। ১৯৯১ সালে আলহাজ্ব নুরুল ইসলাম বি.এসসি. কর্তৃক প্রতিষ্ঠিত।", "footerFullAddr": "বি.এসসি. চত্বর, চান্দগাঁও, চট্টগ্রাম, বাংলাদেশ", "footerQuickLinks": "দ্রুত নেভিগেশন", "footerIdentity": "প্রতিষ্ঠান কোড", "usefulLinks": "গুরুত্বপূর্ণ লিংক", "copyright": "© ২০২৬ হাজেরা-তজু ডিগ্রী কলেজ। সর্বস্বত্ব সংরক্ষিত।", "modalCircularTag": "অফিসিয়াল বিজ্ঞপ্তি", "btnPrint": "প্রিন্ট / পিডিএফ", "btnClose": "বন্ধ করুন", "howToApply": "আবেদনের নিয়ম", "howToApplyText": "অফিসিয়াল অনলাইন ভর্তি পোর্টালের মাধ্যমে আবেদন করুন।", "openDeptPage": "অফিসিয়াল পেজ খুলুন", "estShort": "প্রতিষ্ঠা"}
+        };
+
+        // 2. Data
+        const noticesData = [
+            {"id": 143, "category": "Admission", "catBn": "ভর্তি", "dateEn": "Nov 16, 2026", "dateBn": "১৬ নভেম্বর ২০২৬", "titleEn": "Notice on distribution of registration cards for Honours 1st Year students (Session 2025–2026)", "titleBn": "অনার্স ১ম বর্ষ (শিক্ষাবর্ষ ২০২৫-২০২৬) শিক্ষার্থীদের রেজিস্ট্রেশন কার্ড বিতরণ সংক্রান্ত বিজ্ঞপ্তি।", "url": "https://htdc.edu.bd/storage/notices/notice_143.jpeg", "fmt": "Image"},
+            {"id": 142, "category": "Examination", "catBn": "পরীক্ষা", "dateEn": "Nov 12, 2026", "dateBn": "১২ নভেম্বর ২০২৬", "titleEn": "Supplementary examination schedule for HSC and equivalent exams 2026", "titleBn": "এইচএসসি ও সমমান পরীক্ষা ২০২৬ এর সাপ্লিমেন্টারি পরীক্ষার সময়সূচি", "url": "https://htdc.edu.bd/storage/notices/notice_142.pdf", "fmt": "PDF"},
+            {"id": 141, "category": "Examination", "catBn": "পরীক্ষা", "dateEn": "Nov 12, 2026", "dateBn": "১২ নভেম্বর ২০২৬", "titleEn": "Notice on signatures of HSC (Supplementary) 2026 form fill-up examinees", "titleBn": "২০২৬ সালে এইচএসসি (সাপ্লিমেন্টারি) পরীক্ষার ফরম পূরণকারী পরীক্ষার্থীদের স্বাক্ষর সংক্রান্ত বিজ্ঞপ্তি।", "url": "https://htdc.edu.bd/storage/notices/notice_141.jpeg", "fmt": "Image"},
+            {"id": 140, "category": "Admission", "catBn": "ভর্তি", "dateEn": "Nov 12, 2026", "dateBn": "১২ নভেম্বর ২০২৬", "titleEn": "Notice on Class XI (Session 2026–2027) registration (ESIF)", "titleBn": "একাদশ শ্রেণির (শিক্ষাবর্ষ ২০২৬-২০২৭) রেজিস্ট্রেশন (ESIF) সংক্রান্ত বিজ্ঞপ্তি।", "url": "https://htdc.edu.bd/storage/notices/notice_140.jpeg", "fmt": "Image"},
+            {"id": 139, "category": "Admission", "catBn": "ভর্তি", "dateEn": "Nov 11, 2026", "dateBn": "১১ নভেম্বর ২০২৬", "titleEn": "Notice on 1st Year Degree (Pass) admission activities, Session 2025–2026", "titleBn": "২০২৫-২০২৬ শিক্ষাবর্ষে ১ম বর্ষ ডিগ্রি পাস শ্রেণির ভর্তি কার্যক্রম সংক্রান্ত বিজ্ঞপ্তি।", "url": "https://htdc.edu.bd/storage/notices/notice_139.pdf", "fmt": "PDF"},
+            {"id": 138, "category": "Examination", "catBn": "পরীক্ষা", "dateEn": "Nov 10, 2026", "dateBn": "১০ নভেম্বর ২০২৬", "titleEn": "Notice on extension of the HSC (Supplementary) 2026 form fill-up period", "titleBn": "২০২৬ সালে এইচএসসি (সাপ্লিমেন্টারি) পরীক্ষার ফরম পূরণ সময় বর্ধিতকরণ সংক্রান্ত বিজ্ঞপ্তি।", "url": "https://htdc.edu.bd/storage/notices/notice_138.jpeg", "fmt": "Image"},
+            {"id": 137, "category": "Administrative", "catBn": "প্রশাসনিক", "dateEn": "Nov 07, 2026", "dateBn": "০৭ নভেম্বর ২০২৬", "titleEn": "Observance of National Revolution and Solidarity Day 2026", "titleBn": "জাতীয় বিপ্লব ও সংহতি দিবস ২০২৬ উদযাপন", "url": "https://htdc.edu.bd/storage/notices/notice_137.pdf", "fmt": "PDF"},
+            {"id": 136, "category": "Admission", "catBn": "ভর্তি", "dateEn": "Nov 06, 2026", "dateBn": "০৬ নভেম্বর ২০২৬", "titleEn": "Registration of Class XI (Session 2026–2027) students admitted online", "titleBn": "২০২৬-২০২৭ শিক্ষাবর্ষে একাদশ শ্রেণিতে অনলাইনের মাধ্যমে ভর্তিকৃত শিক্ষার্থীদের রেজিস্ট্রেশনকরণ প্রসঙ্গে", "url": "https://htdc.edu.bd/storage/notices/notice_136.jpg", "fmt": "Image"},
+            {"id": 135, "category": "Administrative", "catBn": "প্রশাসনিক", "dateEn": "Nov 06, 2026", "dateBn": "০৬ নভেম্বর ২০২৬", "titleEn": "College closure notice", "titleBn": "কলেজ বন্ধের বিজ্ঞপ্তি", "url": "https://htdc.edu.bd/storage/notices/notice_135.jpeg", "fmt": "Image"},
+            {"id": 134, "category": "Examination", "catBn": "পরীক্ষা", "dateEn": "Nov 06, 2026", "dateBn": "০৬ নভেম্বর ২০২৬", "titleEn": "Notice on HSC (Supplementary) 2026 form fill-up", "titleBn": "২০২৬ সালের এইচ.এস.সি (সাপ্লিমেন্টারি) পরীক্ষার ফরম পূরণ সংক্রান্ত বিজ্ঞপ্তি", "url": "https://htdc.edu.bd/storage/notices/notice_134.jpeg", "fmt": "Image"}
+        ];
+
+        // 3. Bilingual Academic Departments Data
+        const departmentsData = {"hsc": [{"icon": "fa-atom", "nameEn": "Science Group (HSC)", "nameBn": "বিজ্ঞান বিভাগ (এইচএসসি)", "codeEn": "Chattogram Board • HSC", "codeBn": "চট্টগ্রাম বোর্ড • এইচএসসি", "descEn": "HSC Science group at HTDC, supported by the college Science Lab, ICT Lab and multimedia classrooms.", "descBn": "এইচটিডিসি-র এইচএসসি বিজ্ঞান বিভাগ; বিজ্ঞান ল্যাব, আইসিটি ল্যাব ও মাল্টিমিডিয়া ক্লাসরুম সুবিধাসহ।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=1", "pageUrl": "https://htdc.edu.bd/science"}, {"icon": "fa-chart-line", "nameEn": "Business Studies (HSC)", "nameBn": "ব্যবসায় শিক্ষা বিভাগ (এইচএসসি)", "codeEn": "Chattogram Board • HSC", "codeBn": "চট্টগ্রাম বোর্ড • এইচএসসি", "descEn": "HSC Business Studies group at HTDC.", "descBn": "এইচটিডিসি-র এইচএসসি ব্যবসায় শিক্ষা বিভাগ।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=1", "pageUrl": "https://htdc.edu.bd/business-studies"}, {"icon": "fa-landmark", "nameEn": "Humanities (HSC)", "nameBn": "মানবিক বিভাগ (এইচএসসি)", "codeEn": "Chattogram Board • HSC", "codeBn": "চট্টগ্রাম বোর্ড • এইচএসসি", "descEn": "HSC Humanities group at HTDC.", "descBn": "এইচটিডিসি-র এইচএসসি মানবিক বিভাগ।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=1", "pageUrl": "https://htdc.edu.bd/humanities"}], "honours": [{"icon": "fa-calculator", "nameEn": "Accounting (Honours)", "nameBn": "হিসাববিজ্ঞান (অনার্স)", "codeEn": "National University • Honours", "codeBn": "জাতীয় বিশ্ববিদ্যালয় • অনার্স", "descEn": "Honours program in Accounting under the National University.", "descBn": "জাতীয় বিশ্ববিদ্যালয়ের অধীনে হিসাববিজ্ঞান অনার্স প্রোগ্রাম।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=3", "pageUrl": "https://htdc.edu.bd/accounting"}, {"icon": "fa-briefcase", "nameEn": "Management (Honours)", "nameBn": "ব্যবস্থাপনা (অনার্স)", "codeEn": "National University • Honours", "codeBn": "জাতীয় বিশ্ববিদ্যালয় • অনার্স", "descEn": "Honours program in Management under the National University.", "descBn": "জাতীয় বিশ্ববিদ্যালয়ের অধীনে ব্যবস্থাপনা অনার্স প্রোগ্রাম।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=3", "pageUrl": "https://htdc.edu.bd/management"}, {"icon": "fa-coins", "nameEn": "Economics (Honours)", "nameBn": "অর্থনীতি (অনার্স)", "codeEn": "National University • Honours", "codeBn": "জাতীয় বিশ্ববিদ্যালয় • অনার্স", "descEn": "Honours program in Economics under the National University.", "descBn": "জাতীয় বিশ্ববিদ্যালয়ের অধীনে অর্থনীতি অনার্স প্রোগ্রাম।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=3", "pageUrl": "https://htdc.edu.bd/economics"}], "degree": [{"icon": "fa-book-open", "nameEn": "B.A. (Degree Pass)", "nameBn": "বি.এ. (ডিগ্রী পাস)", "codeEn": "National University • Degree", "codeBn": "জাতীয় বিশ্ববিদ্যালয় • ডিগ্রী", "descEn": "Bachelor of Arts (Degree Pass) program under the National University.", "descBn": "জাতীয় বিশ্ববিদ্যালয়ের অধীনে বি.এ. (ডিগ্রী পাস) প্রোগ্রাম।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=2", "pageUrl": "https://htdc.edu.bd/ba"}, {"icon": "fa-building-columns", "nameEn": "B.B.S. (Degree Pass)", "nameBn": "বি.বি.এস. (ডিগ্রী পাস)", "codeEn": "National University • Degree", "codeBn": "জাতীয় বিশ্ববিদ্যালয় • ডিগ্রী", "descEn": "Bachelor of Business Studies (Degree Pass) program under the National University.", "descBn": "জাতীয় বিশ্ববিদ্যালয়ের অধীনে বি.বি.এস. (ডিগ্রী পাস) প্রোগ্রাম।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=2", "pageUrl": "https://htdc.edu.bd/bbs"}, {"icon": "fa-people-group", "nameEn": "B.S.S. (Degree Pass)", "nameBn": "বি.এস.এস. (ডিগ্রী পাস)", "codeEn": "National University • Degree", "codeBn": "জাতীয় বিশ্ববিদ্যালয় • ডিগ্রী", "descEn": "Bachelor of Social Science (Degree Pass) program under the National University.", "descBn": "জাতীয় বিশ্ববিদ্যালয়ের অধীনে বি.এস.এস. (ডিগ্রী পাস) প্রোগ্রাম।", "applyUrl": "https://application.htdc.edu.bd/apply?program_id=2", "pageUrl": "https://htdc.edu.bd/bss"}]};
+
+        // 4. All 6 Unique Provided HTDC Gallery Photos
+        const galleryPhotos = [{"url": "https://htdc.edu.bd/storage/galleries/kwqrBfYpSSjWHePU9DQ69z6CMD5iHuIPDW0sSULK.png", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "College Gate", "captionBn": "কলেজ গেট"}, {"url": "https://htdc.edu.bd/storage/galleries/1hdOPnpgsb7b0QsCqN5WQ8I1Zsp27yUXH6YWOUaS.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "College Building 1", "captionBn": "কলেজ ভবন ১"}, {"url": "https://htdc.edu.bd/storage/galleries/GW5iOMtmtLI6PGjvqxCapa4NvOijyNQzRuyElkvT.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "College Building 2", "captionBn": "কলেজ ভবন ২"}, {"url": "https://htdc.edu.bd/storage/galleries/l08EWQ9IhcnBtc7nXdg27Gy36vafsg9vzfzqFrZR.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "College Building 3", "captionBn": "কলেজ ভবন ৩"}, {"url": "https://htdc.edu.bd/storage/galleries/BPtPL0gCfD7lGcujYvGVjl0u8SJx87qxhdmR6ofC.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "Eid-e-Miladunnabi (SAW) celebration", "captionBn": "ঈদে মিলাদুন্নবী (সাঃ) উদযাপন"}, {"url": "https://htdc.edu.bd/storage/galleries/vjFQu6fIYiK8q9BXahti27d9QDV6rfHAVugOk1tz.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "Eid-e-Miladunnabi (SAW) celebration", "captionBn": "ঈদে মিলাদুন্নবী (সাঃ) উদযাপন"}, {"url": "https://htdc.edu.bd/storage/galleries/lunIrT0Yq4Sdbd5ne9ERmifuHjz1SObhm4lXbkbr.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "Bengali New Year 1433 celebration", "captionBn": "বাংলার নববর্ষ ১৪৩৩ উদযাপন"}, {"url": "https://htdc.edu.bd/storage/galleries/FYHcls2YfAaCDVrCcSEBLTJuIV2yJEqfElrS6ye8.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "Bengali New Year 1433 celebration", "captionBn": "বাংলার নববর্ষ ১৪৩৩ উদযাপন"}, {"url": "https://htdc.edu.bd/storage/galleries/S9AkH7Xru0ykv5KpyZNQ4oIbLOrEJAUjEudvzslE.jpg", "fallback": "https://placehold.co/1000x750/14237A/E5A91A?text=HTDC", "captionEn": "Shaheed Dibosh (Martyrs' Day)", "captionBn": "শহীদ দিবস"}];
+
+        const peopleLinks = [{"icon": "fa-chalkboard-user", "en": "Teacher Information", "bn": "শিক্ষক তথ্য", "url": "https://htdc.edu.bd/teacher-information"}, {"icon": "fa-users-gear", "en": "Staff Information", "bn": "কর্মচারী তথ্য", "url": "https://htdc.edu.bd/staff-information"}, {"icon": "fa-people-roof", "en": "Governing Board", "bn": "পরিচালনা পর্ষদ", "url": "https://htdc.edu.bd/governing-board"}, {"icon": "fa-user-tie", "en": "Principal List", "bn": "অধ্যক্ষ তালিকা", "url": "https://htdc.edu.bd/principle-list"}, {"icon": "fa-user-shield", "en": "Vice Principal List", "bn": "উপাধ্যক্ষ তালিকা", "url": "https://htdc.edu.bd/vice-principle-list"}, {"icon": "fa-clock-rotate-left", "en": "Ex. Teacher List", "bn": "প্রাক্তন শিক্ষক তালিকা", "url": "https://htdc.edu.bd/ex-teacher-list"}, {"icon": "fa-briefcase", "en": "Teacher & Staff Vacant Posts", "bn": "শিক্ষক ও কর্মচারী শূন্যপদ", "url": "https://htdc.edu.bd/teacher-vacant-posts"}, {"icon": "fa-right-to-bracket", "en": "Teacher / Staff Panel", "bn": "শিক্ষক / কর্মচারী প্যানেল", "url": "https://portal.htdc.edu.bd/accounts/login/employee/"}];
+        const serviceLinks = [{"icon": "fa-square-poll-vertical", "en": "Results", "bn": "ফলাফল", "url": "https://htdc.edu.bd/results"}, {"icon": "fa-file-arrow-down", "en": "Form Download", "bn": "ফরম ডাউনলোড", "url": "https://htdc.edu.bd/form-downloads"}, {"icon": "fa-table-list", "en": "Class Routine", "bn": "ক্লাস রুটিন", "url": "https://htdc.edu.bd/class-routine"}, {"icon": "fa-calendar-check", "en": "Exam Routine", "bn": "পরীক্ষার রুটিন", "url": "https://htdc.edu.bd/exam-routine"}, {"icon": "fa-calendar-days", "en": "Academic Calendar", "bn": "একাডেমিক ক্যালেন্ডার", "url": "https://htdc.edu.bd/academic-calendar"}, {"icon": "fa-umbrella-beach", "en": "Yearly Holidays", "bn": "বার্ষিক ছুটির তালিকা", "url": "https://htdc.edu.bd/yearly-holidays"}, {"icon": "fa-certificate", "en": "Testimonial & TC", "bn": "প্রশংসাপত্র ও টিসি", "url": "https://htdc.edu.bd/testimonial-tc"}, {"icon": "fa-user-check", "en": "Daily Attendance", "bn": "দৈনিক উপস্থিতি", "url": "https://htdc.edu.bd/daily-attendance"}, {"icon": "fa-chart-column", "en": "Public Exam Results (3 Years)", "bn": "পাবলিক পরীক্ষার ফলাফল (৩ বছর)", "url": "https://htdc.edu.bd/exam-results"}, {"icon": "fa-book-open-reader", "en": "Magazine", "bn": "ম্যাগাজিন", "url": "https://htdc.edu.bd/magazine"}, {"icon": "fa-user-graduate", "en": "Student Panel", "bn": "শিক্ষার্থী প্যানেল", "url": "https://portal.htdc.edu.bd/accounts/login/student/"}, {"icon": "fa-comments", "en": "Feedback", "bn": "মতামত", "url": "https://htdc.edu.bd/feedback"}];
+        const facilityLinks = [{"icon": "fa-photo-film", "en": "Digital Content", "bn": "ডিজিটাল কনটেন্ট", "url": "https://htdc.edu.bd/digital-content"}, {"icon": "fa-chalkboard", "en": "Multimedia Classroom", "bn": "মাল্টিমিডিয়া ক্লাসরুম", "url": "https://htdc.edu.bd/multimedia-classroom"}, {"icon": "fa-book", "en": "Central Library", "bn": "কেন্দ্রীয় গ্রন্থাগার", "url": "https://htdc.edu.bd/central-library"}, {"icon": "fa-computer", "en": "ICT Lab", "bn": "আইসিটি ল্যাব", "url": "https://htdc.edu.bd/ict-lab"}, {"icon": "fa-wifi", "en": "Wi-Fi", "bn": "ওয়াই-ফাই", "url": "https://htdc.edu.bd/wifi"}, {"icon": "fa-compass", "en": "Rover Scout", "bn": "রোভার স্কাউট", "url": "https://htdc.edu.bd/rover-scout"}, {"icon": "fa-person-military-pointing", "en": "BNCC", "bn": "বিএনসিসি", "url": "https://htdc.edu.bd/bncc"}, {"icon": "fa-heart-pulse", "en": "Red Crescent", "bn": "রেড ক্রিসেন্ট", "url": "https://htdc.edu.bd/red-crescent"}, {"icon": "fa-flask", "en": "Science Lab", "bn": "বিজ্ঞান ল্যাব", "url": "https://htdc.edu.bd/science-lab"}];
+
+        // 5. Render Notices
+        function renderNotices() {
+            const grid = document.getElementById('noticesGrid');
+            const filtered = currentNoticeFilter === 'all'
+                ? noticesData
+                : noticesData.filter(n => n.category === currentNoticeFilter);
+            const bn = currentLang === 'bn';
+
+            grid.innerHTML = filtered.map(n => `
+                <article class="bg-white dark:bg-midnight-card rounded-2xl p-6 sm:p-7 border border-royal/10 dark:border-gold/20 shadow-md hover:shadow-xl hover:border-gold transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-htdc/15 text-emerald-htdc dark:text-emerald-light">
+                                ${bn ? n.catBn : n.category}
+                            </span>
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1.5">
+                                <i class="fa-regular fa-calendar text-gold"></i> ${bn ? n.dateBn : n.dateEn}
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-lg sm:text-xl font-bold text-royal-deep dark:text-white group-hover:text-emerald-htdc dark:group-hover:text-gold transition-colors leading-snug mb-5">
+                            ${bn ? n.titleBn : n.titleEn}
+                        </h3>
+                    </div>
+                    <div class="pt-4 border-t border-royal/10 dark:border-white/10 flex items-center justify-between gap-3">
+                        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider"><i class="fa-regular fa-file-lines mr-1"></i>${n.fmt}</span>
+                        <a href="${n.url}" target="_blank" rel="noopener" class="text-xs sm:text-sm font-bold text-royal dark:text-gold hover:text-emerald-htdc transition-colors inline-flex items-center gap-1.5">
+                            <span>${i18n[currentLang].readCircular}</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // 6. Render Academic Departments
+        function renderDepartments() {
+            const grid = document.getElementById('departmentsGrid');
+            const list = departmentsData[currentAcademicTier] || [];
+
+            grid.innerHTML = list.map((dept, idx) => `
+                <div class="bg-white dark:bg-midnight-card rounded-2xl p-7 border border-royal/10 dark:border-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-xl bg-royal text-gold flex items-center justify-center text-xl shadow">
+                                <i class="fa-solid ${dept.icon}"></i>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-htdc dark:text-gold bg-emerald-htdc/10 dark:bg-gold/15 px-3 py-1 rounded-full">
+                                ${currentLang === 'bn' ? dept.codeBn : dept.codeEn}
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-royal-deep dark:text-white mb-2.5">
+                            ${currentLang === 'bn' ? dept.nameBn : dept.nameEn}
+                        </h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                            ${currentLang === 'bn' ? dept.descBn : dept.descEn}
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-royal/10 dark:border-white/10 flex justify-between items-center">
+                        <button onclick="openDepartmentDetail(${idx})" class="text-xs sm:text-sm font-bold text-royal dark:text-gold hover:text-emerald-htdc transition-colors flex items-center gap-1.5 cursor-pointer">
+                            <span>${i18n[currentLang].syllabusBtn}</span>
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <a href="${dept.applyUrl}" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-htdc dark:text-emerald-light hover:underline">
+                            ${i18n[currentLang].applyNow} &rarr;
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 6b. Render link-card sections (teachers & staff, services, facilities)
+        function renderLinkGrid(id, list) {
+            const grid = document.getElementById(id);
+            if (!grid) return;
+            const bn = currentLang === 'bn';
+            grid.innerHTML = list.map(item => `
+                <a href="${item.url}" target="_blank" rel="noopener" class="group bg-white dark:bg-midnight-card rounded-2xl p-5 border border-royal/10 dark:border-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-gold transition-all duration-300 flex items-center gap-4 min-h-[84px]">
+                    <div class="w-12 h-12 rounded-xl bg-royal text-gold flex items-center justify-center text-xl shadow flex-shrink-0">
+                        <i class="fa-solid ${item.icon}"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <h3 class="font-serif text-lg font-bold text-royal-deep dark:text-white leading-snug group-hover:text-emerald-htdc dark:group-hover:text-gold transition-colors">${bn ? item.bn : item.en}</h3>
+                        <span class="text-xs text-emerald-htdc dark:text-gold font-semibold">${i18n[currentLang].openOfficial} <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></span>
+                    </div>
+                </a>
+            `).join('');
+        }
+        function renderLinkSections() {
+            renderLinkGrid('peopleGrid', peopleLinks);
+            renderLinkGrid('servicesGrid', serviceLinks);
+            renderLinkGrid('facilitiesGrid', facilityLinks);
+        }
+
+        // 7. Render 6-Photo Campus Gallery
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            grid.innerHTML = galleryPhotos.map((photo, idx) => `
+                <div onclick="openLightbox(${idx})" class="group relative rounded-2xl overflow-hidden border border-white/15 bg-royal-night aspect-[4/3] cursor-pointer shadow-lg">
+                    <img src="${photo.url}" 
+                         onerror="this.src='${photo.fallback}'"
+                         alt="${currentLang === 'bn' ? photo.captionBn : photo.captionEn}"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royal-night/95 via-royal-night/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+                    <div class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/40 backdrop-blur-md border border-gold/40 text-gold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-expand text-xs"></i>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 p-5">
+                        <p class="font-serif text-lg font-semibold text-white leading-snug">
+                            ${currentLang === 'bn' ? photo.captionBn : photo.captionEn}
+                        </p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Typography: last word of each English headline becomes the script accent
+        function decorateHeadings(lang) {
+            if (lang !== 'en') return;
+            document.querySelectorAll('.hero-headline, .section-headline').forEach(el => {
+                const m = el.textContent.trim().match(/^(.*\s)(\S+?)([.,:;!?]*)$/);
+                if (!m) return;
+                el.textContent = m[1];
+                const span = document.createElement('span');
+                span.className = 'script-accent';
+                span.textContent = m[2];
+                el.appendChild(span);
+                if (m[3]) el.appendChild(document.createTextNode(m[3]));
+            });
+        }
+
+        // 8. 1-Click Language Switcher (EN <-> বাংলা)
+        function applyLanguage(lang) {
+            currentLang = lang;
+            store.set('htdc_lang', lang);
+            document.documentElement.setAttribute('lang', lang);
+
+            // Update toggle button label to show target language
+            document.getElementById('langToggleText').textContent = lang === 'en' ? 'বাংলা' : 'English';
+
+            // Update all static data-i18n elements
+            const dict = i18n[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.textContent = dict[key];
+            });
+
+            // Update theme button text
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('themeText').textContent = isDark ? dict.lightModeLabel : dict.darkModeLabel;
+
+            decorateHeadings(lang);
+
+            // Re-render dynamic bilingual sections
+            renderNotices();
+            renderDepartments();
+            renderGallery();
+            renderLinkSections();
+        }
+
+        function toggleLanguage() {
+            applyLanguage(currentLang === 'en' ? 'bn' : 'en');
+        }
+
+        // 9. 1-Click Dark / Light Mode Switcher
+        function applyTheme(theme) {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            const text = document.getElementById('themeText');
+            const dict = i18n[currentLang];
+
+            if (theme === 'dark') {
+                html.classList.add('dark');
+                icon.className = 'fa-solid fa-sun text-gold text-[11px]';
+                text.textContent = dict.lightModeLabel;
+            } else {
+                html.classList.remove('dark');
+                icon.className = 'fa-solid fa-moon text-gold text-[11px]';
+                text.textContent = dict.darkModeLabel;
+            }
+            store.set('htdc_theme', theme);
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            applyTheme(isDark ? 'light' : 'dark');
+        }
+
+        // 10. Modals (Notice, Department Details, Portal, Lightbox)
+        function openDepartmentDetail(idx) {
+            const dept = departmentsData[currentAcademicTier][idx];
+            if (!dept) return;
+            document.getElementById('detailBadge').textContent = currentLang === 'bn' ? dept.codeBn : dept.codeEn;
+            document.getElementById('detailTitle').textContent = currentLang === 'bn' ? dept.nameBn : dept.nameEn;
+            document.getElementById('detailContent').innerHTML = `
+                <p>${currentLang === 'bn' ? dept.descBn : dept.descEn}</p>
+                <div class="bg-ivory dark:bg-midnight-elevated p-4 rounded-xl border border-royal/10 dark:border-white/10 text-sm">
+                    <strong>${i18n[currentLang].howToApply}:</strong>
+                    ${i18n[currentLang].howToApplyText}
+                    <div class="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+                        <a href="${dept.applyUrl}" target="_blank" rel="noopener" class="font-bold text-emerald-htdc dark:text-gold hover:underline py-1">${i18n[currentLang].applyNow} &rarr;</a>
+                        <a href="${dept.pageUrl}" target="_blank" rel="noopener" class="font-bold text-royal dark:text-gold hover:underline py-1">${i18n[currentLang].openDeptPage} &rarr;</a>
+                    </div>
+                </div>
+            `;
+            const modal = document.getElementById('detailModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetailModal() {
+            const modal = document.getElementById('detailModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function openLightbox(idx) {
+            const photo = galleryPhotos[idx];
+            if (!photo) return;
+            const img = document.getElementById('lightboxImg');
+            img.src = photo.url;
+            img.onerror = () => { img.src = photo.fallback; };
+            document.getElementById('lightboxCaption').textContent = currentLang === 'bn' ? photo.captionBn : photo.captionEn;
+
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // 11. Hero Slideshow Rotation across HTDC Campus Photos
+        let heroSlideIdx = 0;
+        setInterval(() => {
+            const heroImg = document.getElementById('heroBgImage');
+            if (!heroImg || document.hidden || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            heroSlideIdx = (heroSlideIdx + 1) % 3;
+            const slide = galleryPhotos[heroSlideIdx];
+            heroImg.style.opacity = '0.25';
+            setTimeout(() => {
+                heroImg.src = slide.url;
+                heroImg.onerror = () => { heroImg.src = slide.fallback; };
+                heroImg.style.opacity = '0.50';
+            }, 450);
+        }, 7000);
+
+        // 12. Animated Number Counters
+        function animateCounters() {
+            document.querySelectorAll('.stat-counter').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 1600;
+                const startTime = performance.now();
+
+                function update(now) {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = Math.floor(eased * target).toLocaleString();
+                    if (progress < 1) requestAnimationFrame(update);
+                    else counter.textContent = target.toLocaleString();
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // 13. Initialize Everything on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide Curtain Preloader smoothly
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 550);
+
+            // Apply saved theme & language
+            const savedTheme = store.get('htdc_theme') || 'light';
+            applyTheme(savedTheme);
+            applyLanguage(currentLang);
+
+            // Notice Filter Tabs
+            document.querySelectorAll('.notice-tab').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.notice-tab').forEach(b => {
+                        b.className = 'notice-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer';
+                    });
+                    btn.className = 'notice-tab active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-royal text-white shadow cursor-pointer';
+                    currentNoticeFilter = btn.dataset.filter;
+                    renderNotices();
+                });
+            });
+
+            // Academic Tier Tabs
+            document.querySelectorAll('.academic-tier-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.academic-tier-btn').forEach(b => {
+                        b.className = 'academic-tier-btn px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white dark:bg-midnight-card text-royal-deep dark:text-slate-200 border border-royal/15 dark:border-white/15 hover:border-gold cursor-pointer';
+                    });
+                    btn.className = 'academic-tier-btn active px-5 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all bg-royal text-white shadow-md cursor-pointer';
+                    currentAcademicTier = btn.dataset.tier;
+                    renderDepartments();
+                });
+            });
+
+            // Scroll Progress Bar & Intersection Observer
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                document.getElementById('scrollProgress').style.width = `${pct}%`;
+            }, { passive: true });
+
+            let countersStarted = false;
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        if (!countersStarted && entry.target.querySelector('.stat-counter')) {
+                            countersStarted = true;
+                            animateCounters();
+                        }
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+            // Backdrop & Escape Key Modal Close
+            window.addEventListener('click', (e) => {
+                if (e.target.id === 'detailModal') closeDetailModal();
+                if (e.target.id === 'lightboxModal') closeLightbox();
+            });
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeDetailModal();
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+    <script>
+        // Mobile navigation (standalone so other scripts can never break it)
+        (function () {
+            var btn = document.getElementById('mobileMenuBtn');
+            var drawer = document.getElementById('mobileDrawer');
+            var icon = document.getElementById('mobileMenuIcon');
+            if (!btn || !drawer || !icon) return;
+
+            function setOpen(open) {
+                drawer.classList.toggle('hidden', !open);
+                icon.className = open ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Close Navigation Menu' : 'Open Navigation Menu');
+            }
+
+            btn.setAttribute('aria-controls', 'mobileDrawer');
+            setOpen(false);
+
+            btn.addEventListener('click', function () {
+                setOpen(drawer.classList.contains('hidden'));
+            });
+            drawer.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+                link.addEventListener('click', function () { setOpen(false); });
+            });
+            document.addEventListener('click', function (e) {
+                if (!drawer.classList.contains('hidden') && !drawer.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') setOpen(false);
+            });
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 1280) setOpen(false);
+            });
+        })();
+    </script>
+    <script>
+        // Reading progress ring (standalone, independent of other scripts)
+        (function () {
+            var ring = document.getElementById('scrollRing');
+            if (!ring) return;
+            var arc = ring.querySelector('.ring-arc');
+            var label = ring.querySelector('.ring-pct');
+            var C = 2 * Math.PI * 25;
+            arc.style.strokeDasharray = C;
+            arc.style.strokeDashoffset = C;
+            var ticking = false;
+
+            function update() {
+                ticking = false;
+                var de = document.documentElement;
+                var max = de.scrollHeight - window.innerHeight;
+                var y = window.scrollY || window.pageYOffset || 0;
+                var pct = max > 0 ? Math.min(100, Math.max(0, Math.round((y / max) * 100))) : 0;
+                var bn = de.getAttribute('lang') === 'bn';
+                arc.style.strokeDashoffset = C * (1 - pct / 100);
+                label.textContent = (bn ? pct.toLocaleString('bn-BD') : pct) + '%';
+                ring.setAttribute('aria-label', bn
+                    ? 'পেজের ' + pct.toLocaleString('bn-BD') + '% দেখা হয়েছে। উপরে যেতে ট্যাপ করুন'
+                    : pct + '% of the page viewed. Tap to go back to top');
+                ring.classList.toggle('show', y > 240);
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) { ticking = true; requestAnimationFrame(update); }
+            }, { passive: true });
+            window.addEventListener('resize', update);
+            window.addEventListener('load', update);
+            new MutationObserver(update).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+            ring.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            update();
+        })();
+    </script>
+    <script>
+        // Modal accessibility: move focus in, trap Tab, restore focus on close
+        (function () {
+            var opener = null;
+            function watch(id, closeSel) {
+                var modal = document.getElementById(id);
+                if (!modal) return;
+                new MutationObserver(function () {
+                    var open = !modal.classList.contains('hidden');
+                    if (open) {
+                        opener = document.activeElement;
+                        var c = modal.querySelector(closeSel);
+                        if (c) c.focus();
+                    } else if (opener && opener.focus) {
+                        opener.focus(); opener = null;
+                    }
+                }).observe(modal, { attributes: true, attributeFilter: ['class'] });
+                modal.addEventListener('keydown', function (e) {
+                    if (e.key !== 'Tab') return;
+                    var f = modal.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+                    if (!f.length) return;
+                    var first = f[0], last = f[f.length - 1];
+                    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+                });
+            }
+            watch('detailModal', 'button[aria-label="Close"]');
+            watch('lightboxModal', 'button[aria-label="Close Lightbox"]');
+        })();
+    </script>
+</body>
+</html>
