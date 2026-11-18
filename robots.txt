@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tahmimsadman.github.io/htdc.edu.bd/sitemap.xml
